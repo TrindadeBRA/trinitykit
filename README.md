@@ -1,16 +1,32 @@
+# README - Tema Trinity Kit CMS
 
-# lucastrindade-dev
+Bem-vindo ao tema Trinity Kit CMS para WordPress! Este README fornece instruções básicas para configurar e personalizar o tema.
 
-Bem-vindo ao meu projeto de portfolio pessoal! Este projeto foi desenvolvido utilizando o framework Next.js e está integrado com o Notion para gerenciar o conteúdo da aplicação de uma forma geral.
+## Plugins Necessários
 
-## Tecnologias Utilizadas
+1. Really Simple SSL
+2. Advanced Custom Fields PRO
 
-- [Next.js](https://nextjs.org/): Um framework React para desenvolvimento web.
-- [Notion](https://www.notion.so/): Uma plataforma de produtividade tudo-em-um que integra ferramentas de notas, gerenciamento de projetos e colaboração em um único ambiente online.
-- [Tailwind](https://tailwindcss.com/): Um framework de estilo utilitário para desenvolvimento web que simplifica a criação de interfaces flexíveis e altamente estilizadas.
+## Instalação
 
-## Funcionalidades
+1. Faça o download do tema Trinity Kit CMS.
+2. Acesse o painel de administração do WordPress.
+3. Navegue até "Aparência" > "Temas".
+4. Clique em "Adicionar Novo" e depois em "Enviar Tema".
+5. Selecione o arquivo zip do tema que você baixou e clique em "Instalar Agora".
+6. Após a instalação, ative o tema.
 
-- Uma das características poderosas deste projeto é a capacidade do Next.js de cacheamento de informações diretamente do Notion. Utilizando a integração entre Next.js / Notion / Vercel, conseguimos transformar esse portfolio em uma aplicação estática, resultando em tempos de carregamento extremamente rápidos e uma experiência de usuário aprimorada.
+## Configuração Inicial
 
-- Gerencie o conteúdo do seu portfólio de qualquer lugar, diretamente no Notion. Basta realizar alterações nas tabelas correspondentes, e depois aguardar o tempo de revalidação do Next.js para ver as atualizações refletidas automaticamente no seu site. Se preferir, você também pode forçar uma compilação através do painel de controle da Vercel para garantir uma atualização imediata. Essa flexibilidade permite uma gestão eficiente e ágil do conteúdo, proporcionando uma experiência de atualização suave e conveniente.# TrinityKit
+1. Crie o menu da aplicação. (/wp-admin/nav-menus.php).
+2. Insira o menu criado na posição do menu principal. (/wp-admin/nav-menus.php?action=locations).
+3. Crie a página "home" em páginas.
+4. Crie os ACFs necessários da home.
+
+## Contribuição
+
+Este tema é de código aberto e aceita contribuições. Se você encontrar bugs ou tiver sugestões de melhorias, por favor, relate-os em nosso repositório no GitHub.
+
+---
+
+Esperamos que você aproveite o uso do tema Trinity Kit CMS para WordPress! Se você tiver alguma dúvida ou precisar de suporte adicional, não hesite em nos contatar.
