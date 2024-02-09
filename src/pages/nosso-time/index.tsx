@@ -1,28 +1,33 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import HeroSection from "@/components/Hero";
 import OurTeam from "@/components/OurTeam";
 import { GetStaticProps } from "next";
-import { getHeaderData } from "../api/getHeaderData";
-import { getOurTeamData } from "../api/getOurteamData";
+import { getMenuData } from "../api/getMenuData";
+import { getOurTeamData } from "../api/getOurTeamData";
+import { NextSeo } from "next-seo";
+const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
 
-export default function OurTeamPage({headerData, ourTeamData}:any) {
-  
-    return (
-      <>
-      <Header {...headerData}/>
-      <OurTeam {...ourTeamData}/>
-      <Footer {...headerData}/>
+export default function OurTeamPage({ menuData, ourTeamData }: any) {
+
+  return (
+    <>
+      <NextSeo
+        title={`${websiteTitle} - ${ourTeamData?.title}`}
+        description="Our team description of the page"
+      />
+      <Header {...menuData} />
+      <OurTeam {...ourTeamData} />
+      <Footer {...menuData} />
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const headerData = await getHeaderData();
+  const menuData = await getMenuData();
   const ourTeamData = await getOurTeamData();
   return {
     props: {
-      headerData,
+      menuData,
       ourTeamData,
     },
   };

@@ -1,38 +1,3 @@
-const people = [
-  {
-    name: 'Leonard Krasner1',
-    role: 'Senior Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    xUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    name: 'Leonard Krasner2',
-    role: 'Senior Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    xUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    name: 'Leonard Krasner3',
-    role: 'Senior Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    xUrl: '#',
-    linkedinUrl: '#',
-  },
-  {
-    name: 'Leonard Krasner4',
-    role: 'Senior Designer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    xUrl: '#',
-    linkedinUrl: '#',
-  },
-]
-
 export default function OurTeam(ourTeamData: any) {
   return (
     <div className="bg-gray-800 py-24 sm:py-32">

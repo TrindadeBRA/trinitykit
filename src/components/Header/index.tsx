@@ -6,19 +6,11 @@ import Head from 'next/head'
 const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
 const contactUrl = "#"
 
-export default function Header(headerData:any) {
+export default function Header(menuData:any) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    
     <>
-      <Head>
-        <title>{websiteTitle}</title>
-        <meta property="og:url" content="https://lucastrindade.dev/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Lucas Trindade - Desenvolvedor Full Stack" />
-      </Head>
-
       <header className="bg-gray-900">
         <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -37,7 +29,7 @@ export default function Header(headerData:any) {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
-            {Object.values(headerData).map((item: any) => (
+            {Object.values(menuData).map((item: any) => (
               <a key={item.title} href={item.slug} className="text-sm font-semibold leading-6 text-white">
                 {item.title}
               </a>
@@ -68,7 +60,7 @@ export default function Header(headerData:any) {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/25">
                 <div className="space-y-2 py-6">
-                  {Object.values(headerData).map((item:any) => (
+                  {Object.values(menuData).map((item:any) => (
                     <a
                       key={item.title}
                       href={item.slug}
