@@ -17,6 +17,14 @@ jobs:
         with:
           node-version: '18.17.1'
 
+      - name: Build with WORDPRESS_URL secret
+        run: |
+          npm install -g yarn
+          yarn install --frozen-lockfile
+          yarn build
+        env:
+          WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
+
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -24,12 +32,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build static files
-        run: npm run build
 
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
