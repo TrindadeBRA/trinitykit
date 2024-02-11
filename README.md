@@ -13,11 +13,20 @@ Antes de começar a trabalhar com o Trinity Kit, siga estas etapas para configur
 Na raiz do projeto, crie um arquivo chamado `.env`. Adicione as seguintes variáveis de ambiente:
 
 ```
-- `NEXT_PUBLIC_WEBSITE_TITLE`: Define o título do seu website como "Trinity Kit".
-- `NEXT_PUBLIC_WEBSITE_DESCRIPTION`: Define uma descrição breve do seu website, destacando a integração fácil entre WordPress e Next.js.
-- `NEXT_PUBLIC_WEBSITE_URL`: Define a URL principal do seu website como "https://dominio-final.com.br".
-- `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID`: Define o ID de acompanhamento do Google Analytics para rastreamento de métricas.
-- `WORDPRESS_URL`: Define a URL do seu servidor WordPress como "https://cms.thetrinityweb.com.br".
+# Título para SEO
+NEXT_PUBLIC_WEBSITE_TITLE="Trinity Kit"
+
+# Descrição para SEO
+NEXT_PUBLIC_WEBSITE_DESCRIPTION="Fácil integração entre WordPress e Next.js."
+
+# Dominío da aplicação para SEO
+NEXT_PUBLIC_WEBSITE_URL="https://dominio-final.com.br"
+
+# Código do GA
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXX"
+
+# URL do WP CMS
+WORDPRESS_URL="https://cms.thetrinityweb.com.br"
 ```
 
 2. **Troque as imagens pelas imagens do cliente na pasta public**:
