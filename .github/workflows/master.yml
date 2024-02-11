@@ -37,4 +37,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /hml.thetrinityweb.com.br/
-          local-dir: $GITHUB_WORKSPACE/build_output # Usar o novo diretório "build_output" como fonte para a sincronização FTP
+          local-dir: $GITHUB_WORKSPACE/build_output/ # Usar o novo diretório "build_output" como fonte para a sincronização FTP
