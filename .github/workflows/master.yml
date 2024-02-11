@@ -16,6 +16,4 @@ jobs:
           node-version: 18.17.1
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - name: Set up environment variables
-        run: echo "WORDPRESS_URL=$WORDPRESS_URL" >> $GITHUB_ENV
-      - run: yarn build
+      - run: yarn build --WORDPRESS_URL=${{ secrets.WORDPRESS_URL }}
