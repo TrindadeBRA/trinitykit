@@ -30,7 +30,8 @@ jobs:
           echo "RewriteEngine On" >> out/.htaccess
           echo "RewriteCond %{REQUEST_FILENAME} !-d" >> out/.htaccess
           echo "RewriteCond %{REQUEST_FILENAME}\.html -f" >> out/.htaccess
-          echo "RewriteRule ^([^\.]+)$ $1.html [NC,L]" >> out/.htaccess
+          echo "RewriteRule ^([^\.]+)$ \$1.html [NC,L]" >> out/.htaccess
+        
 
       - name: Cache dependencies
         uses: actions/cache@v2
