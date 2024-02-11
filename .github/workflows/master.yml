@@ -20,15 +20,7 @@ jobs:
         env:
           WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
         run: |
-          yarn build
-          mkdir -p dist
-          mv out dist/
-
-      - name: 📂 Upload build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: build-output
-          path: dist/
+          yarn build/
 
   deploy:
     needs: build
@@ -37,12 +29,6 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v3
       
-      - name: 📂 Download build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: build-output
-          path: dist/
-      
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -50,3 +36,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /hml.thetrinityweb.com.br/
+          local-dir: /out/
