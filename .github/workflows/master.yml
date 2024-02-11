@@ -20,7 +20,7 @@ jobs:
         env:
           WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
         run: |
-          yarn build/
+          yarn build
 
   deploy:
     needs: build
