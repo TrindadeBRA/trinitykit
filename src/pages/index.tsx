@@ -5,23 +5,20 @@ import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { getHomeData } from "./api/getHomeData";
 import { getMenuData } from "./api/getMenuData";
-const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 //TO DO - Criar documentação das APIS do CMS
 
-
-
-export default function Home({ menuData, homeData }: any) {
+export default function Home({ menuData, homeData, settings }: any) {
   return (
     <>
       <NextSeo
-        title={`${websiteTitle} - ${homeData?.title}`}
+        title={`${settings?.title} - ${homeData?.title}`}
         description="Home page description of the page"
       />
-      <Header {...menuData} />
+      <Header menuData={menuData} settings={settings} />
       <HeroSection {...homeData} />
-      <Footer {...menuData} />
+      <Footer menuData={menuData} settings={settings} />
     </>
   )
 }
@@ -29,6 +26,7 @@ export default function Home({ menuData, homeData }: any) {
 export const getStaticProps: GetStaticProps = async () => {
   const menuData = await getMenuData();
   const homeData = await getHomeData();
+
   return {
     props: {
       menuData,

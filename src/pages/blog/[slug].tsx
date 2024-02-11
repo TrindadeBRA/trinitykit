@@ -5,20 +5,19 @@
     import { NextSeo } from "next-seo";
     import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
     import { getMenuData } from "../api/getMenuData";
-    const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE;
 
     // TODO - Criar page blog index
 
-    export default function BlogPost({ menuData, post }: any) {
+    export default function BlogPost({ menuData, post, settings }: any) {
         return (
             <>
                 <NextSeo
-                    title={`${websiteTitle} - Blog`}
+                    title={`${settings?.title} - Blog`}
                     description="Blog description of the page"
                 />
-                <Header {...menuData} />
+                <Header menuData={menuData} settings={settings} />
                 <h1>{post.title.rendered}</h1>
-                <Footer {...menuData} />
+                <Footer menuData={menuData} settings={settings} />
             </>
         );
     }

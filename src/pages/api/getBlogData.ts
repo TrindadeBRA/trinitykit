@@ -23,7 +23,7 @@ export const getPostBySlug = async (slug: string) => {
 
 export const getAllPostSlugs = async () => {
   try {
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?per_page=100`); // ajuste per_page conforme necessário
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts`); // ajuste per_page conforme necessário
     
     if (!response.ok) {
       throw new Error('Failed to fetch post slugs from API');

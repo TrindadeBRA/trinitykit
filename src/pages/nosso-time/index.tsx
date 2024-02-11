@@ -5,19 +5,18 @@ import { GetStaticProps } from "next";
 import { getMenuData } from "../api/getMenuData";
 import { getOurTeamData } from "../api/getOurTeamData";
 import { NextSeo } from "next-seo";
-const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
 
-export default function OurTeamPage({ menuData, ourTeamData }: any) {
+export default function OurTeamPage({ menuData, ourTeamData, settings }: any) {
 
   return (
     <>
       <NextSeo
-        title={`${websiteTitle} - ${ourTeamData?.title}`}
+        title={`${settings?.title} - ${ourTeamData?.title}`}
         description="Our team description of the page"
       />
-      <Header {...menuData} />
+      <Header menuData={menuData} settings={settings} />
       <OurTeam {...ourTeamData} />
-      <Footer {...menuData} />
+      <Footer menuData={menuData} settings={settings} />
     </>
   )
 }

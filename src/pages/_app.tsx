@@ -1,35 +1,37 @@
 import '@/styles/globals.css'
+import { NextPageContext } from 'next';
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo';
-import { Analytics } from '@vercel/analytics/react'
-import { GoogleAnalytics } from '@next/third-parties/google'
-const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
-const websiteDescription = process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION
-const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL
-const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+import { SettingsDataType, getSettingsData } from './api/getSettingsData';
 
-export default function App({ Component, pageProps }: AppProps) {
+// TODO - Importar os componente de GA
+export default function App({ Component, pageProps, settings }: AppProps & { settings: SettingsDataType }) {
   return (
     <>
       <DefaultSeo
-        title={websiteTitle}
-        description={websiteDescription}
+        title={settings?.title}
+        description={settings?.description}
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
-          url: websiteUrl,
-          siteName: websiteTitle,
+          url: settings?.frontend_app_url,
+          siteName: settings?.title,
           images: [{
             url: '/ogimage.webp',
             width: 600,
             height: 315,
-            alt: websiteTitle,
+            alt: settings?.title,
           }],
         }}
       />
-      <Component {...pageProps} />
-      {/* <Analytics /> */}
-      {/* <GoogleAnalytics gaId={gaId}/> */}
+      <Component {...pageProps} settings={settings}/>
     </>
   )
 }
+
+App.getInitialProps = async (ctx: NextPageContext) => {
+  const settingsData = await getSettingsData();
+  return {
+    settings: settingsData,
+  };
+};

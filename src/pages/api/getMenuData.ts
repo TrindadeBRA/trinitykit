@@ -15,3 +15,10 @@ export const getMenuData = async () => {
     throw error;
   }
 };
+
+export type MenuDataType = {
+  id: number;
+  title: string;
+  slug: string;
+  url: string;
+};
