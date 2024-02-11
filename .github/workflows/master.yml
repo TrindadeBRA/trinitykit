@@ -35,3 +35,8 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /hml.thetrinityweb.com.br/
         local-dir: out/
+
+    - name: Limpar
+      run: |
+        # Adicione comandos para limpar após o deploy, se necessário
+        # Por exemplo, remover arquivos temporários ou limpar o cache
