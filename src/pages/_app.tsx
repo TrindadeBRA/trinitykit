@@ -25,8 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
           siteName: websiteTitle,
           images: [{
             url: '/ogimage.webp',
-            width: 850,
-            height: 650,
+            width: 600,
+            height: 315,
             alt: websiteTitle,
           }],
         }}
