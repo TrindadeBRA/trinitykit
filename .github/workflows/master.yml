@@ -36,4 +36,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /hml.thetrinityweb.com.br/
-          local-dir: /out/
+          local-dir: out/
