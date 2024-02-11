@@ -7,6 +7,11 @@ import { getHomeData } from "./api/getHomeData";
 import { getMenuData } from "./api/getMenuData";
 const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE
 
+//TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
+//TO DO - Criar documentação das APIS do CMS
+
+
+
 export default function Home({ menuData, homeData }: any) {
   return (
     <>
