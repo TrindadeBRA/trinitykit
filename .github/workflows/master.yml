@@ -25,7 +25,7 @@ jobs:
           # Criar diretório de saída se não existir
           mkdir -p $GITHUB_WORKSPACE/build_output
 
-          # Verificar a estrutura do diretório de saída
+          # Verificar se o diretório de saída foi criado corretamente
           ls -R $GITHUB_WORKSPACE/build_output
 
           # Copy only the content of /out to build_output
