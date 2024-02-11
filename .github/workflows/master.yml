@@ -36,8 +36,8 @@ jobs:
       - name: Deploy to FTP Server
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-            server: ${{secrets.FTP_SERVER}}
-            username: ${{ secrets.FTP_USERNAME }}
+            server: ${{secrets.FTP_HOST}}
+            username: ${{ secrets.FTP_LOGIN }}
             password: ${{ secrets.FTP_PASSWORD }}
             local-dir: out/
             server-dir: /hml.thetrinityweb.com.br/
