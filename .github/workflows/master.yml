@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '18.17.1'
 
-      - name: Build with WORDPRESS_URL secret
+      - name: Build with secrets variables
         run: |
           npm install -g yarn
           yarn install --frozen-lockfile
@@ -32,7 +32,6 @@ jobs:
           echo "RewriteCond %{REQUEST_FILENAME}\.html -f" >> out/.htaccess
           echo "RewriteRule ^([^\.]+)$ \$1.html [NC,L]" >> out/.htaccess
         
-
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
