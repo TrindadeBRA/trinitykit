@@ -16,12 +16,18 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo
         title={websiteTitle}
-        description="Fácil integração entre WordPress e Next.js."
+        description={`${websiteTitle} - FrontEnd`}
         openGraph={{
           type: 'website',
           locale: 'pt_BR',
           url: websiteUrl,
           siteName: websiteTitle,
+          images: [{
+            url: '/ogimage.webp',
+            width: 850,
+            height: 650,
+            alt: websiteTitle,
+          }],
         }}
       />
       <Component {...pageProps} />
