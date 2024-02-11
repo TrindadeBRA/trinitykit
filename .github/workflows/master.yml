@@ -21,6 +21,7 @@ jobs:
           WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
         run: |
           yarn build
+          cp -r out $GITHUB_WORKSPACE/out # Copiar a pasta /out para o diretório de trabalho
 
   deploy:
     needs: build
@@ -36,4 +37,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /hml.thetrinityweb.com.br/
-          local-dir: out/
+          local-dir: $GITHUB_WORKSPACE/out # Usar a pasta /out do diretório de trabalho
