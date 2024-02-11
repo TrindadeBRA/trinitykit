@@ -7,6 +7,8 @@
     import { getMenuData } from "../api/getMenuData";
     const websiteTitle = process.env.NEXT_PUBLIC_WEBSITE_TITLE;
 
+    // TODO - Criar page blog index
+
     export default function BlogPost({ menuData, post }: any) {
         return (
             <>
