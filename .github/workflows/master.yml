@@ -2,7 +2,9 @@ on:
   push:
     branches:
       - master
-name: 🚀 Deploy - TrinityKit Frontend
+
+name: 🚀 Deploy - TrinityKit CMS
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -10,11 +12,20 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-    
+
+    - name: 🛠️ Build project and create .htaccess
+      run: |
+        npm install
+        npm run build
+        echo "RewriteEngine On" > out/.htaccess
+        echo "RewriteBase /" >> out/.htaccess
+        # Adicione mais regras do .htaccess conforme necessário
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_LOGIN }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /hml.thetrinityweb.com.br/
+        server-dir: /cms.thetrinityweb.com.br/wp-content/themes/trinitykit/
+        local-dir: out/
