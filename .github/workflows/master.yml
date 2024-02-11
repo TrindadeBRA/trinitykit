@@ -1,9 +1,9 @@
+name: 🚀 Deploy - TrinityKit CMS
+
 on:
   push:
     branches:
       - master
-
-name: 🚀 Deploy - TrinityKit CMS
 
 jobs:
   web-deploy:
@@ -14,29 +14,13 @@ jobs:
     - name: 🛠️ Build project and create .htaccess
       uses: actions/setup-node@v1
       with:
-        node-version: 12
-      steps:
-        - run: npm install -g yarn
-        - run: yarn install --frozen-lockfile
-        - run: yarn build
-        - run: |
-            echo "RewriteEngine On" > out/.htaccess
-            echo "RewriteBase /" >> out/.htaccess
-            # Adicione mais regras do .htaccess conforme necessário
-
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_LOGIN }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /hml.thetrinityweb.com.br/
-        local-dir: out/
-
-    - name: Limpar
-      run: |
-        # Adicione comandos para limpar após o deploy, se necessário
-        # Por exemplo, remover arquivos temporários ou limpar o cache
+        node-version: '14.x' # Você pode ajustar a versão do Node conforme necessário
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - run: |
+          echo "RewriteEngine On" > out/.htaccess
+          echo "RewriteBase /" >> out/.htaccess
+          # Adicione mais regras do .htaccess conforme necessário
+      - name: 📂 Arquivos modificados
+        run: git status
