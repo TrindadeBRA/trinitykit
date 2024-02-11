@@ -12,11 +12,11 @@ Antes de começar a trabalhar com o Trinity Kit, siga estas etapas para configur
 
 2. **Adicione as seguintes variáveis de ambiente**:
 
-NEXT_PUBLIC_WEBSITE_TITLE="Trinity Kit"
+```NEXT_PUBLIC_WEBSITE_TITLE="Trinity Kit"
 NEXT_PUBLIC_WEBSITE_DESCRIPTION="Fácil integração entre WordPress e Next.js."
 NEXT_PUBLIC_WEBSITE_URL="https://dominio-final.com.br"
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXX"
-WORDPRESS_URL="https://cms.thetrinityweb.com.br"
+WORDPRESS_URL="https://cms.thetrinityweb.com.br"```
 
 3. **Troque as imagens pelas imagens do cliente na pasta public**:
 

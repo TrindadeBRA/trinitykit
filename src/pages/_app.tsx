@@ -8,10 +8,6 @@ const websiteDescription = process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION
 const websiteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL
 const gaId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
 
-// TODO - Integrar o Yoast SEO 
-// TODO - Entender o uso do websiteUrl
-
-
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
