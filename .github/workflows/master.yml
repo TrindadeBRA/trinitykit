@@ -10,11 +10,10 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    
-    - name: 🛠️ Build project and create .htaccess
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x' # Você pode ajustar a versão do Node conforme necessário
+      - name: 🛠️ Build project and create .htaccess
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
