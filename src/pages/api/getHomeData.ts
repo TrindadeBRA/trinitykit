@@ -15,3 +15,16 @@ export const getHomeData = async () => {
     throw error;
   }
 };
+
+export type HomeDataType = {
+  id: number;
+  title: string;
+  content: string;
+  date: string;
+  hero: {
+    title: string;
+    description: string;
+    cta_text: string;
+    cta_url: string;
+  };
+}

@@ -2,12 +2,18 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import OurTeam from "@/components/OurTeam";
 import { GetStaticProps } from "next";
-import { getMenuData } from "../api/getMenuData";
-import { getOurTeamData } from "../api/getOurTeamData";
+import { MenuDataType, getMenuData } from "../api/getMenuData";
+import { OurTeamDataType, getOurTeamData } from "../api/getOurTeamData";
 import { NextSeo } from "next-seo";
+import { SettingsDataType } from "../api/getSettingsData";
 
-export default function OurTeamPage({ menuData, ourTeamData, settings }: any) {
+type OurTeamProps = {
+  menuData: MenuDataType[];
+  ourTeamData: OurTeamDataType;
+  settings: SettingsDataType;
+}
 
+export default function OurTeamPage({ menuData, ourTeamData, settings }: OurTeamProps) {
   return (
     <>
       <NextSeo

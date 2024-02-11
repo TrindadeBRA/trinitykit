@@ -3,13 +3,19 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import { getHomeData } from "./api/getHomeData";
-import { getMenuData } from "./api/getMenuData";
+import { HomeDataType, getHomeData } from "./api/getHomeData";
+import { MenuDataType, getMenuData } from "./api/getMenuData";
+import { SettingsDataType } from "./api/getSettingsData";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
-//TO DO - Criar documentação das APIS do CMS
 
-export default function Home({ menuData, homeData, settings }: any) {
+type HomeProps = {
+  menuData: MenuDataType[];
+  homeData: HomeDataType;
+  settings: SettingsDataType;
+}
+
+export default function Home({ menuData, homeData, settings }: HomeProps) {
   return (
     <>
       <NextSeo
@@ -24,8 +30,8 @@ export default function Home({ menuData, homeData, settings }: any) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const menuData = await getMenuData();
-  const homeData = await getHomeData();
+  const menuData: MenuDataType[] = await getMenuData();
+  const homeData: HomeDataType = await getHomeData();
 
   return {
     props: {
