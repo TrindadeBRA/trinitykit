@@ -1,4 +1,5 @@
-name: Build and Deploy
+name: 🚀 Deploy - TrinityKit
+
 on:
   push:
     branches:
