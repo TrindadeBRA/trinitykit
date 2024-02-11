@@ -22,15 +22,6 @@ jobs:
         run: |
           yarn build
 
-          # Criar diretório de saída se não existir
-          mkdir -p $GITHUB_WORKSPACE/build_output
-
-          # Verificar se o diretório de saída foi criado corretamente
-          ls -R $GITHUB_WORKSPACE/build_output
-
-          # Copy only the content of /out to build_output
-          cp -r out/. $GITHUB_WORKSPACE/build_output
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -45,4 +36,4 @@ jobs:
           username: ${{ secrets.FTP_LOGIN }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /hml.thetrinityweb.com.br/
-          local-dir: ${{ github.workspace }}/build_output/
+          local-dir: /out/
