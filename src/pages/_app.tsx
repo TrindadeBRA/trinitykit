@@ -3,8 +3,8 @@ import { NextPageContext } from 'next';
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo';
 import { SettingsDataType, getSettingsData } from './api/getSettingsData';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
-// TODO - Importar os componente de GA
 export default function App({ Component, pageProps, settings }: AppProps & { settings: SettingsDataType }) {
   return (
     <>
@@ -25,6 +25,8 @@ export default function App({ Component, pageProps, settings }: AppProps & { set
         }}
       />
       <Component {...pageProps} settings={settings}/>
+      {/* <Analytics /> */}
+      {/* <GoogleAnalytics gaId={settings?.google_analytics_id}/> */}
     </>
   )
 }
