@@ -21,7 +21,7 @@ jobs:
           WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
         run: |
           yarn build
-          cp -r out $GITHUB_WORKSPACE/build_output # Copiar a pasta /out para um novo diretório chamado "build_output"
+          cp -r out $GITHUB_WORKSPACE/build_output
 
   deploy:
     needs: build
