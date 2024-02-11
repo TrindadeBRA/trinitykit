@@ -1,38 +1,40 @@
-name: 🚀 Deploy - TrinityKit
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v1
 
-      - uses: actions/setup-node@v1
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1
         with:
-          node-version: 18.17.1
-      - run: npm install -g yarn
-      - run: yarn install --frozen-lockfile
-      - name: Build with WORDPRESS_URL secret
-        env:
-          WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
-        run: |
-          yarn next export
+          node-version: '18.17.1'
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v3
-      
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Cache dependencies
+        uses: actions/cache@v2
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_LOGIN }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /hml.thetrinityweb.com.br/
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static files
+        run: npm run build
+
+      - name: Deploy to FTP Server
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+            server: ${{secrets.FTP_SERVER}}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            local-dir: out/
+            server-dir: '/'
