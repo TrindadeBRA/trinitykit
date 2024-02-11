@@ -16,4 +16,7 @@ jobs:
           node-version: 18.17.1
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn build --WORDPRESS_URL=${{ secrets.WORDPRESS_URL }}
+      - name: Build with WORDPRESS_URL secret
+        env:
+          WORDPRESS_URL: ${{ secrets.WORDPRESS_URL }}
+        run: yarn build
