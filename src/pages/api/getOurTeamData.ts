@@ -1,7 +1,7 @@
 export const getOurTeamData = async () => {
   try {
     // Realiza a requisição para a API no WordPress
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/nosso-time/`);
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/page/nosso-time/`);
 
     // Verifica se a requisição foi bem-sucedida
     if (!response.ok) {

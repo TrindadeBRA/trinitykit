@@ -1,7 +1,7 @@
 export const getHomeData = async () => {
   try {
     // Realiza a requisição para a API no WordPress
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/home/`);
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/page/home/`);
   
     // Verifica se a requisição foi bem-sucedida
     if (!response.ok) {
