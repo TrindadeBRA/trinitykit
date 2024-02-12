@@ -26,7 +26,7 @@ export default function App({ Component, pageProps, settings }: AppProps & { set
       />
       <Component {...pageProps} settings={settings}/>
       {/* <Analytics /> */}
-      {/* <GoogleAnalytics gaId={settings?.google_analytics_id}/> */}
+      <GoogleAnalytics gaId={settings?.google_analytics_id}/>
     </>
   )
 }
