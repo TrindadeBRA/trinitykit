@@ -13,6 +13,7 @@ interface HeaderProps {
 
 export default function Header({menuData, settings}: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <>
       <header className="bg-gray-900">
@@ -34,9 +35,9 @@ export default function Header({menuData, settings}: HeaderProps) {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {Object.values(menuData).map((item: MenuDataType) => (
-              <a key={item.title} href={item.slug} className="text-sm font-semibold leading-6 text-white">
+              <Link key={item.title} href={"/" + item.slug} className="text-sm font-semibold leading-6 text-white">
                 {item.title}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -65,13 +66,13 @@ export default function Header({menuData, settings}: HeaderProps) {
               <div className="-my-6 divide-y divide-gray-500/25">
                 <div className="space-y-2 py-6">
                   {Object.values(menuData).map((item:MenuDataType) => (
-                    <a
+                    <Link
                       key={item.title}
-                      href={item.slug}
+                      href={"/" + item.slug}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">

@@ -4,17 +4,16 @@ import { GetStaticProps } from "next";
 import { MenuDataType, getMenuData } from "../api/getMenuData";
 import { NextSeo } from "next-seo";
 import { SettingsDataType } from "../api/getSettingsData";
-import { getIndexBlogData } from "../api/getIndexBlogData";
+import { IndexBlogDataType, getIndexBlogData } from "../api/getIndexBlogData";
 import IndexBlog from "@/components/IndexBlog";
 
 type OurTeamProps = {
   menuData: MenuDataType[];
   settings: SettingsDataType;
-  indexBlogData: any;
+  indexBlogData: IndexBlogDataType;
 }
 
 export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTeamProps) {
-  
   return (
     <>
       <NextSeo

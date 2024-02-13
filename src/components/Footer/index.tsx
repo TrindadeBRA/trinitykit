@@ -15,7 +15,7 @@ export default function Footer({menuData, settings}: FooterProps) {
         <nav className="-mb-6 columns-1 text-center sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
           {Object.values(menuData).map((item:MenuDataType) => (
             <div key={item.id} className="pb-6">
-              <a href={item.slug} className="text-sm leading-6 text-gray-300 hover:text-gray-200">{item.title}</a>
+              <a href={"/" + item.slug} className="text-sm leading-6 text-gray-300 hover:text-gray-200">{item.title}</a>
             </div>
           ))}
         </nav>
