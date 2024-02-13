@@ -6,8 +6,6 @@
     import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
     import { getMenuData } from "../api/getMenuData";
 
-    // TODO - Criar page blog index
-
     export default function BlogPost({ menuData, post, settings }: any) {
         return (
             <>
@@ -24,7 +22,7 @@
 
 
     export const getStaticPaths: GetStaticPaths = async () => {
-        const slugs = await getAllPostSlugs(); // Função para obter todos os slugs dos posts
+        const slugs = await getAllPostSlugs();
         const paths = slugs.map((slug: string) => ({ params: { slug } }));
         return { paths, fallback: false };
     };
