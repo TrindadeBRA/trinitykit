@@ -3,7 +3,7 @@ import React, { useState } from "react";
 //TODO Refatorar ese componente, foi apenas um teste
 
 const WorkWithUsForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] : any = useState({
     name: "",
     email: "",
     phone: "",
@@ -12,15 +12,15 @@ const WorkWithUsForm = () => {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: any) => {
     setFormData({ ...formData, presentation_document: e.target.files[0] }); // Use o mesmo nome que você definiu no FormData
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     const formDataToSend = new FormData();
