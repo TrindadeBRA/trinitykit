@@ -24,9 +24,9 @@ export type OurTeamDataType = {
     title: string;
     description: string;
     our_professionals: Array<{
-      name: string;
-      role: string;
-      imagem_do_profissional: {
+      name_professional: string;
+      role_professional: string;
+      image_professional: {
         id: number;
         title: string;
         filename: string;

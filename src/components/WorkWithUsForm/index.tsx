@@ -30,8 +30,13 @@ const WorkWithUsForm = () => {
     formDataToSend.append('presentation_document', formData.presentation_document); // Use formData.presentation_document para acessar o arquivo
 
     try {
+      const token = "ohuhasgdkahsdkjasnbdkjbasdkjbdjb"
+      console.log(">>>", token)
       const response = await fetch('https://cms.thetrinityweb.com.br/wp-json/trinitykit/v1/talents-bank/add-talent', {
         method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + token,
+        },
         body: formDataToSend,
       });
 
