@@ -1,0 +1,17 @@
+Criar .htacess salvando o permalink  Nome do post 
+
+INSTALAR ACF PRO
+
+Cria Menu - VINCULAR ELE NO MENU PRINCIPAL - Com:
+Home
+Nosso Time
+Trabalhe Conosco
+Blog
+
+Importar ACF - /acf-export dentro do tema do wp
+
+preencher campos do personalizar
+
+preencher acfs da pagina home
+
+Ajsutar settings
