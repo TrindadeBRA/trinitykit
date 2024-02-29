@@ -31,7 +31,6 @@ const WorkWithUsForm = () => {
 
     try {
       const token = "ohuhasgdkahsdkjasnbdkjbasdkjbdjb"
-      console.log(">>>", token)
       const response = await fetch('https://cms.thetrinityweb.com.br/wp-json/trinitykit/v1/talents-bank/add-talent', {
         method: 'POST',
         headers: {

@@ -14,7 +14,9 @@
                     description="Blog description of the page"
                 />
                 <Header menuData={menuData} settings={settings} />
+                {/* TODO Criar layout */}
                 <h1>{post.title.rendered}</h1>
+                <p>{post.content.rendered}</p>
                 <Footer menuData={menuData} settings={settings} />
             </>
         );

@@ -19,7 +19,7 @@ export default function IndexBlog({ indexBlogData }: { indexBlogData: IndexBlogD
               <Link href={"/blog/" + post?.slug}>
                 <div className="relative w-full">
                   <Image
-                    src={post?.thumbnail_url}
+                    src={post?.thumbnail_url ? post?.thumbnail_url : "https://placehold.co/600x400"}
                     alt={post?.title}
                     width={500}
                     height={500}
