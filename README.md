@@ -1,38 +1,47 @@
-# README - Trinity Kit
+# README - Trinity Kit - WordPress e Next.js
 
-## Bem-vindo ao Trinity Kit!
+Bem-vindo ao tema Trinity Kit CMS para WordPress! Este README fornece instruções básicas para configurar e personalizar o tema.
 
-Este é o tema Trinity Kit, uma solução versátil para integração fácil entre WordPress e Next.js.
+## Passo 01 - Instalando e ativando plugins necessários
 
-## Configuração Inicial
+1. Instale e ative o plugin [Advanced Custom Fields (ACF)](https://br.wordpress.org/plugins/advanced-custom-fields/). (Versão FREE)
+2. Instale e ative o plugin [Yoast SEO](https://br.wordpress.org/plugins/wordpress-seo/). (Versão FREE)
 
-Antes de começar a trabalhar com o Trinity Kit, siga estas etapas para configurar o ambiente:
+## Passo 02 - Instalando e ativando o nosso tema
 
-1. **Crie um arquivo `.env`**: 
+1. Faça o download do tema Trinity Kit CMS.
+2. Acesse o painel de administração do WordPress.
+3. Navegue até "Aparência" > "Temas".
+4. Clique em "Adicionar Novo" e depois em "Enviar Tema".
+5. Selecione o arquivo zip do tema que você baixou e clique em "Instalar Agora".
+6. Após a instalação, ative o tema.
 
-Na raiz do projeto, crie um arquivo chamado `.env`. Adicione as seguintes variáveis de ambiente:
+Ao ativar o tema irá ser criado as páginas iniciais e importados os ACFs necessários.
 
-```
-# Título para SEO
-NEXT_PUBLIC_WEBSITE_TITLE="Trinity Kit"
+## Passo 03 - Configurando o WordPress
 
-# Descrição para SEO
-NEXT_PUBLIC_WEBSITE_DESCRIPTION="Fácil integração entre WordPress e Next.js."
+1. Crie o menu da aplicação e insira o menu criado na posição do menu principal. (/wp-admin/nav-menus.php?action=locations).
+2. Adicionar os campos em "Identidade do site" e "TrinityKit Settings". (/wp-admin/customize.php?return=%2Fwp-admin%2Ftheme-editor.php)
 
-# Dominío da aplicação para SEO
-NEXT_PUBLIC_WEBSITE_URL="https://dominio-final.com.br"
+## Passo 04 - Configurando os secrets do repositorio do frontend
 
-# Código do GA
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXX"
+1. Para o CI/CD do projeto é necessário adicionar 4 variaveis de ambiente, sendo elas: ```FTP_HOST```, ```FTP_LOGIN```, ```FTP_PASSWORD``` e ```WORDPRESS_URL```. (https://github.com/username/repo-namesettings/secrets/actions)
+2. No frontend, no arquivo ```.github/workflows/master.yml```, no parametro ```server-dir``` é necessário adicionar o path da pasta em que você deseja fazer upload do projeto. 
 
-# URL do WP CMS
-WORDPRESS_URL="https://cms.thetrinityweb.com.br"
-```
+## Passo 05 - Configurando os campos ACF nas páginas criadas
 
-2. **Troque as imagens pelas imagens do cliente na pasta public**:
+1. Entre em todas as páginas criadas, e preencha todos os ACFs. (/wp-admin/edit.php?post_type=page)
 
-Substitua as imagens padrão na pasta public pelas imagens fornecidas pelo cliente, mantendo os nomes de arquivo originais para garantir a consistência no código.
+## Passo 06 - Buildando a aplicação
 
-3. **Criação de Páginas Correspondentes ao WordPress**:
+1. Clique no botão, isso irá dar restart no ultimo job bem sucedido, pode acompanhar pelo github-actions do repositorio do front. (/wp-admin/admin.php?page=my-admin-page)
 
-Para manter a consistência com o WordPress, crie páginas em sua aplicação Next.js de acordo com as páginas existentes no WordPress, priorizando a correspondência das slugs. Isso ajudará a manter a estrutura e a navegação do site consistentes entre as duas plataformas. Certifique-se de que as URLs e o conteúdo das páginas correspondam o mais próximo possível entre o WordPress e o Trinity Kit.:
+
+
+## Contribuição
+
+Este tema é de código aberto e aceita contribuições. Se você encontrar bugs ou tiver sugestões de melhorias, por favor, relate-os em nosso repositório no GitHub.
+
+---
+
+Esperamos que você aproveite o uso do tema Trinity Kit! Se você tiver alguma dúvida ou precisar de suporte adicional, não hesite em nos contatar. [LucasTrindade.Dev](https://lucastrindade.dev)
