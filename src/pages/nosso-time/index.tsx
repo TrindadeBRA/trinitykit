@@ -14,27 +14,27 @@ type OurTeamProps = {
 }
 
 // TODO Desativado pois removi o ACVF PRO, Impedindo o uso do campo do Flexible
-export default function OurTeamPage({ menuData, ourTeamData, settings }: OurTeamProps) {
-  return (
-    <>
-      <NextSeo
-        title={`${settings?.title} - ${ourTeamData?.title}`}
-        description="Our team description of the page"
-      />
-      <Header menuData={menuData} settings={settings} />
-      <OurTeam {...ourTeamData} />
-      <Footer menuData={menuData} settings={settings} />
-    </>
-  )
-}
+// export default function OurTeamPage({ menuData, ourTeamData, settings }: OurTeamProps) {
+//   return (
+//     <>
+//       <NextSeo
+//         title={`${settings?.title} - ${ourTeamData?.title}`}
+//         description="Our team description of the page"
+//       />
+//       <Header menuData={menuData} settings={settings} />
+//       <OurTeam {...ourTeamData} />
+//       <Footer menuData={menuData} settings={settings} />
+//     </>
+//   )
+// }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const menuData = await getMenuData();
-  const ourTeamData = await getOurTeamData();
-  return {
-    props: {
-      menuData,
-      ourTeamData,
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps = async () => {
+//   const menuData = await getMenuData();
+//   const ourTeamData = await getOurTeamData();
+//   return {
+//     props: {
+//       menuData,
+//       ourTeamData,
+//     },
+//   };
+// };
