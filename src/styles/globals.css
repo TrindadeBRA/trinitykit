@@ -93,3 +93,11 @@ body {
   margin-bottom: 1em;
   list-style-type: decimal;
 }
+
+#blog-content .aligncenter {
+  margin: 0 auto;
+}
+
+#blog-content .wp-caption {
+  padding: 40px 0;
+}
