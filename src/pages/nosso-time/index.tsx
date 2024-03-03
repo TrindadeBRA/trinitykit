@@ -13,6 +13,7 @@ type OurTeamProps = {
   settings: SettingsDataType;
 }
 
+// TODO Desativado pois removi o ACVF PRO, Impedindo o uso do campo do Flexible
 export default function OurTeamPage({ menuData, ourTeamData, settings }: OurTeamProps) {
   return (
     <>
