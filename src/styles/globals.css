@@ -18,10 +18,78 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+#blog-content h1 {
+  font-size: 2em;
+  line-height: 2em;
+  margin-bottom: 1em;
+}
+
+#blog-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+#blog-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+#blog-content h4 {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+#blog-content h5 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+#blog-content h6 {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+
+#blog-content p {
+  margin-bottom: 1em;
+}
+
+#blog-content ul {
+  margin-bottom: 1em;
+}
+
+#blog-content ul,
+#blog-content ol {
+  padding-left: 20px;
+}
+
+#blog-content ol {
+  margin-bottom: 1em;
+}
+
+#blog-content li {
+  margin-bottom: 1em;
+}
+
+#blog-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#blog-content a:hover {
+  text-decoration: underline;
+}
+
+#blog-content ul {
+  margin-bottom: 1em;
+  list-style-type: disc;
+}
+
+#blog-content ol {
+  margin-bottom: 1em;
+  list-style-type: decimal;
 }

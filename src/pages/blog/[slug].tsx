@@ -8,7 +8,6 @@ import { getMenuData } from "../api/getMenuData";
 import BlogPostPage from "@/components/BlogPostPage";
 
 export default function BlogPost({ menuData, post, settings }: any) {
-    console.log(post?.yoast_head_json?.og_image[0]?.url)
     return (
         <>
             <NextSeo
