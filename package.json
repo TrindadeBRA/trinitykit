@@ -20,7 +20,8 @@
     "next-seo": "^6.4.0",
     "notion-client": "^6.16.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.17",
