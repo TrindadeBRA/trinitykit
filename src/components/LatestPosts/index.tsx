@@ -16,7 +16,7 @@ export default function LatestPosts() {
   return (
     <section className="relative pt-12 pb-24 bg-jacarta-900">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+        <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" width={100} height={100}/>
       </picture>
       <div className="container">
         <h2 className="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">Últimos conteúdos!</h2>
@@ -25,7 +25,8 @@ export default function LatestPosts() {
             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
               <figure className="group overflow-hidden">
                 <a href="single-post.html">
-                  <img
+                  <Image
+                    width={100} height={100}
                     src="img/blog/post_2.jpg"
                     alt="post 2"
                     className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
@@ -60,7 +61,7 @@ export default function LatestPosts() {
 
                 {/* <!-- Date / Time --> */}
                 <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                  <span><time datetime="2022-02-05">5 Feb</time></span>
+                  <span><time dateTime="2022-02-05">5 Feb</time></span>
                   <span>•</span>
                   <span>3 min read</span>
                 </div>
@@ -71,7 +72,8 @@ export default function LatestPosts() {
             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
               <figure className="group overflow-hidden">
                 <a href="single-post.html">
-                  <img
+                  <Image
+                    width={100} height={100}
                     src="img/blog/post_3.jpg"
                     alt="post 3"
                     className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
@@ -106,7 +108,7 @@ export default function LatestPosts() {
 
                 {/* <!-- Date / Time --> */}
                 <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                  <span><time datetime="2022-02-05">22 Feb</time></span>
+                  <span><time dateTime="2022-02-05">22 Feb</time></span>
                   <span>•</span>
                   <span>3 min read</span>
                 </div>
@@ -117,7 +119,8 @@ export default function LatestPosts() {
             <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
               <figure className="group overflow-hidden">
                 <a href="single-post.html">
-                  <img
+                  <Image
+                    width={100} height={100}
                     src="img/blog/post_2.jpg"
                     alt="post 4"
                     className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
@@ -152,7 +155,7 @@ export default function LatestPosts() {
 
                 {/* <!-- Date / Time --> */}
                 <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                  <span><time datetime="2022-02-05">18 Jan</time></span>
+                  <span><time dateTime="2022-02-05">18 Jan</time></span>
                   <span>•</span>
                   <span>3 min read</span>
                 </div>
