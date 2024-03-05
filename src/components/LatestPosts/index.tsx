@@ -45,7 +45,7 @@ export default function LatestPosts() {
                   >
                   <span className="dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                    <a href="#">NFT's</a>
+                    <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
                   </span>
                 </div>
@@ -92,7 +92,7 @@ export default function LatestPosts() {
                   >
                   <span className="dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                    <a href="#">NFT's</a>
+                    <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
                   </span>
                 </div>
@@ -139,7 +139,7 @@ export default function LatestPosts() {
                   >
                   <span className="dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                    <a href="#">NFT's</a>
+                    <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
                   </span>
                 </div>
