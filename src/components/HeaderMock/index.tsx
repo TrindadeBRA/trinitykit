@@ -21,9 +21,8 @@ export default function HeaderMock() {
         <div className="flex items-center px-6 py-6 xl:px-24">
           {/* <!-- Logo --> */}
           <a href="#" className="shrink-0" id=''>
-            <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-            <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
-
+            <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
+            <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" />
           </a>
 
           {/* <!-- Menu / Actions --> */}
@@ -36,8 +35,8 @@ export default function HeaderMock() {
             >
               {/* <!-- Mobile Logo --> */}
               <a href="#" className="shrink-0">
-                <img src="img/logo.png" className="max-h-7 dark:hidden" alt="Xhibiter | NFT Marketplace" />
-                <img src="img/logo_white.png" className="hidden max-h-7 dark:block" alt="Xhibiter | NFT Marketplace" />
+                <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
+                <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" />
               </a>
 
               {/* <!-- Mobile Menu Close --> */}
