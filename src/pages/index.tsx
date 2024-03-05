@@ -6,8 +6,9 @@ import { NextSeo } from "next-seo";
 import { HomeDataType, getHomeData } from "./api/getHomeData";
 import { MenuDataType, getMenuData } from "./api/getMenuData";
 import { SettingsDataType } from "./api/getSettingsData";
-import HeaderMock from "@/components/HeaderMock";
+import NewHeader from "@/components/NewHeader";
 import HeroSlider from "@/components/HeroSlider";
+import LatestPosts from "@/components/LatestPosts";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 
@@ -24,9 +25,10 @@ export default function Home({ menuData, homeData, settings }: HomeProps) {
         title={`${settings?.title} - ${homeData?.title}`}
         description="Home page description of the page"
       />
-      <HeaderMock/>
+      <NewHeader menuData={menuData} settings={settings}/>
       {/* <HeroSection {...homeData} /> */}
       <HeroSlider/>
+      <LatestPosts/>
       <Footer menuData={menuData} settings={settings} />
     </>
   )

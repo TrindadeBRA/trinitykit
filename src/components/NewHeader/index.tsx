@@ -12,7 +12,7 @@ interface HeaderProps {
   settings: SettingsDataType;
 }
 
-export default function HeaderMock() {
+export default function NewHeader({ menuData, settings }: HeaderProps) {
   return (
     <>
       <header
@@ -21,8 +21,8 @@ export default function HeaderMock() {
         <div className="flex items-center px-6 py-6 xl:px-24">
           {/* <!-- Logo --> */}
           <a href="#" className="shrink-0" id=''>
-            <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
-            <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" />
+            <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
+            <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
           </a>
 
           {/* <!-- Menu / Actions --> */}
@@ -35,8 +35,8 @@ export default function HeaderMock() {
             >
               {/* <!-- Mobile Logo --> */}
               <a href="#" className="shrink-0">
-                <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt="Xhibiter | NFT Marketplace" />
-                <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt="Xhibiter | NFT Marketplace" />
+                <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
+                <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
               </a>
 
               {/* <!-- Mobile Menu Close --> */}
@@ -62,27 +62,11 @@ export default function HeaderMock() {
             {/* <!-- Primary Nav --> */}
             <nav className="navbar w-full max-lg:mt-24">
               <ul className="flex flex-col lg:flex-row">
-                <li className="group">
-                  <a
-                    href="#"
-                    className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:text-white lg:px-5 lg:hover:text-white"
-                  >Home</a
-                  >
-                </li>
-                <li className="group">
-                  <a
-                    href="#"
-                    className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:text-white lg:px-5 lg:hover:text-white"
-                  >Page1</a
-                  >
-                </li>
-                <li className="group">
-                  <a
-                    href="#"
-                    className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:text-white lg:px-5 lg:hover:text-white"
-                  >Page2</a
-                  >
-                </li>
+                {Object.values(menuData).map((item: MenuDataType) => (
+                  <li className="group" key={item.title}>
+                    <Link href={"/" + item.slug} className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:text-white lg:px-5 lg:hover:text-white">{item.title}</Link>
+                  </li>
+                ))}
               </ul>
             </nav>
 
@@ -94,7 +78,7 @@ export default function HeaderMock() {
                 data-bs-toggle="modal"
                 data-bs-target="#walletModal"
               >
-                Connect Wallet
+                Lorem Ipsum
               </a>
 
               <hr className="my-5 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />

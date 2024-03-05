@@ -1,0 +1,72 @@
+Layouts:
+
+- Header
+- Footer
+    - 4 Colunas
+        - Logo + Menu
+        - Mais Recentes
+        - Mais Acessados
+        - ADS
+    - © 2024 Resumo do Livro. Desenvolvido por: Trinity Web + Social
+
+
+- Home
+    - Hero
+    - Últimos Posts
+    - Quem Somos
+    - NewsLetter (Sem prioridade)
+    - Avaliaçoes
+    - Contato
+- Política de privacidade;
+- Quem somos
+
+- Sidebar
+
+- Blog Archive
+    - Blog (Archive)
+        - Hero 
+        - Posts + Sidebar
+    - Blog Category (Archive)
+    - Blog Author (Archive)
+
+- Blog Post
+    - Hero
+    - Post Content
+    - Sidebar
+    - Bio do Autor
+    - NewsLetter (Sem prioridade)
+    - Próximo / Anterior (Sem prioridade)
+    - Recomendado
+    - Comentario (Sem prioridade)
+
+- 404
+
+==//==
+
+API
+Dados para o BlogPost
+
+- Autor
+    - Nome
+    - Imagem Gravatar
+    - BIO
+- Post
+    - Data de publicação
+    - Tempo de leitura (Sem prioridade)
+    - Categorias
+    - Slug
+- Posts Relacionados
+
+
+
+==//==
+
+
+
+Social:
+
+- https://www.facebook.com/resumodolivro0/?show_switched_toast=0&show_invite_to_follow=0&show_switched_tooltip=0&show_podcast_settings=0&show_community_review_changes=0&show_community_rollback=0&show_follower_visibility_disclosure=0
+- https://br.pinterest.com/resumodolivro/
+- https://www.instagram.com/resumodolivro_/
+- https://www.tiktok.com/@resumo.do.livro?lang=pt-BR
+- contato@resumodolivro.com

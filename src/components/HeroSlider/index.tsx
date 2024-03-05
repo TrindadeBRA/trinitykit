@@ -22,7 +22,7 @@ export default function HeroSlider() {
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">
-                                Confira nossos resumos!
+                                Desbrave um novo mundo!
                             </a>
                             {/* <a href="#" className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume">
                                 Explore
