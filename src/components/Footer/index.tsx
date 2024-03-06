@@ -24,7 +24,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
            <p className="mt-10 text-center text-xs leading-5 text-gray-300">&copy; {currentYear} {settings?.title}, Todos direitos reservados.</p>
          </div>
        </footer> */}
-      <footer className="page-footer bg-light-base border-t border-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-900">
+      <footer className="page-footer border-t border-jacarta-100 dark:border-jacarta-600 bg-light-base dark:bg-jacarta-900">
         <div className="container">
           <div className="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">
             <div className="col-span-full sm:col-span-3 md:col-span-4">

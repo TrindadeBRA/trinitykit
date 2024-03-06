@@ -16,7 +16,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
   return (
     <>
       <header
-        className="js-page-header page-header--transparent fixed top-0 z-20 w-full bg-white/[.50] dark:bg-white/[.15] backdrop-blur transition-colors"
+        className="js-page-header page-header--transparent fixed top-0 z-20 w-full bg-white/[.50] dark:bg-white/[.08] backdrop-blur transition-colors"
       >
         <div className="flex items-center px-6 py-6 xl:px-24">
           {/* <!-- Logo --> */}
@@ -64,7 +64,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
               <ul className="flex flex-col lg:flex-row">
                 {Object.values(menuData).map((item: MenuDataType) => (
                   <li className="group" key={item.title}>
-                    <Link href={"/" + item.slug} className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:text-white lg:px-5 lg:hover:text-white">{item.title}</Link>
+                    <Link href={"/" + item.slug} className="flex items-center justify-between py-3.5 font-display text-base text-jacarta-700 hover:text-accent dark:hover:text-accent-lighter dark:text-white lg:px-5">{item.title}</Link>
                   </li>
                 ))}
               </ul>
