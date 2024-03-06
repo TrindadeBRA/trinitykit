@@ -9,7 +9,7 @@ export default function Body404() {
       </picture>
       <div className="container">
         <div className="mx-auto max-w-lg text-center">
-          <Image src="img/404.png" alt="" className="mb-16 inline-block" width={335} height={165}/>
+          <Image src="/img/404.png" alt="" className="mb-16 inline-block" width={335} height={165}/>
           <h1 className="mb-6 font-display text-4xl text-jacarta-700 dark:text-white md:text-6xl">Página não encontrada!</h1>
           <p className="mb-12 text-lg leading-normal text-jacarta-500 dark:text-jacarta-300">
             Ops! A página que você procura não existe. Pode ter sido movido ou excluído.

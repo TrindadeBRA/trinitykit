@@ -14,7 +14,7 @@ type OurTeamProps = {
   indexBlogData: IndexBlogDataType;
 }
 
-export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTeamProps) {
+export default function BlogPage({ menuData, settings, indexBlogData }: OurTeamProps) {
   return (
     <>
       <NextSeo
