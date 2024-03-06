@@ -12,18 +12,6 @@ export default function Footer({ menuData, settings }: FooterProps) {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      {/* <footer className="bg-gray-950">
-         <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-           <nav className="-mb-6 columns-1 text-center sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-             {Object.values(menuData).map((item:MenuDataType) => (
-               <div key={item.id} className="pb-6">
-                 <a href={"/" + item.slug} className="text-sm leading-6 text-gray-300 hover:text-gray-200">{item.title}</a>
-               </div>
-             ))}
-           </nav>
-           <p className="mt-10 text-center text-xs leading-5 text-gray-300">&copy; {currentYear} {settings?.title}, Todos direitos reservados.</p>
-         </div>
-       </footer> */}
       <footer className="page-footer border-t border-jacarta-100 dark:border-jacarta-600 bg-light-base dark:bg-jacarta-900">
         <div className="container">
           <div className="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">

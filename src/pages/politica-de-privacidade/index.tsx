@@ -14,6 +14,7 @@ import WhoWeAreCTA from "@/components/WhoWeAreCTA";
 import Testimonials from "@/components/Testimonials";
 import WhoWeAre from "@/components/WhoWeAre";
 import Contact from "@/components/Contact";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 
@@ -23,7 +24,7 @@ type HomeProps = {
   settings: SettingsDataType;
 }
 
-export default function QuemSomos({ menuData, homeData, settings }: HomeProps) {
+export default function PoliticaDePrivacidade({ menuData, homeData, settings }: HomeProps) {
   return (
     <>
       <NextSeo
@@ -31,8 +32,8 @@ export default function QuemSomos({ menuData, homeData, settings }: HomeProps) {
         description="Home page description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Quem Somos"} />
-      <WhoWeAre />
+      <MiniHero title={"Política de privacidade"} />
+      <PrivacyPolicy />
       <Testimonials />
       <Footer menuData={menuData} settings={settings} />
     </>
