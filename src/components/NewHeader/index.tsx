@@ -24,24 +24,24 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
       const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setTheme(prefersDarkMode ? 'dark' : 'light');
     }
-  }, []);
-
+  
+    // Seleciona a tag HTML
+    const htmlElement: any = document.querySelector('html');
+    
+    // Adiciona a classe com base no tema atual
+    htmlElement.classList.add(theme);
+    
+    // Remove a classe oposta
+    const oppositeTheme = theme === 'light' ? 'dark' : 'light';
+    htmlElement.classList.remove(oppositeTheme);
+  }, [theme]); // Adicione 'theme' como dependência para que o efeito seja executado sempre que o tema mudar
+  
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme-preference', newTheme);
-    
-    // Seleciona a tag HTML
-    const htmlElement: any = document.querySelector('html');
-    
-    // Adiciona a nova classe
-    htmlElement.classList.add(newTheme);
-    
-    // Remove a classe oposta
-    const oppositeTheme = newTheme === 'light' ? 'dark' : 'light';
-    htmlElement.classList.remove(oppositeTheme);
-
   };
+  
   
 
   
