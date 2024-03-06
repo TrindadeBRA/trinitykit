@@ -11,6 +11,7 @@ import HeroSlider from "@/components/HeroSlider";
 import LatestPosts from "@/components/LatestPosts";
 import WhoWeAreCTA from "@/components/WhoWeAreCTA";
 import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 
@@ -33,6 +34,7 @@ export default function Home({ menuData, homeData, settings }: HomeProps) {
       <LatestPosts/>
       <WhoWeAreCTA />
       <Testimonials/>
+      <Contact />
       <Footer menuData={menuData} settings={settings} />
     </>
   )
