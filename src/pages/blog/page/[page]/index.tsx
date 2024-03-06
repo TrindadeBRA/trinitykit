@@ -35,7 +35,7 @@ export default function BlogPage({ menuData, settings, indexBlogData }: OurTeamP
   )
 }
 
-const perPage = 4; // Número de posts por página
+const perPage = 13; // Número de posts por página
 
 export const getStaticPaths: GetStaticPaths = async () => {
   // Aqui você deve buscar o número total de páginas disponíveis
