@@ -53,7 +53,7 @@ export default function Contact() {
                   className="contact-form-input w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                   required
                   name="message"
-                  rows="5"
+                  rows={5}
                 ></textarea>
               </div>
 
