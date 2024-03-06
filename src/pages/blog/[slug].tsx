@@ -26,7 +26,6 @@ export default function BlogPost({ menuData, post, settings }: any) {
                   }}
             />
             <NewHeader menuData={menuData} settings={settings}/>
-            <MiniHero title={`${post?.title?.rendered}`} />
             <BlogPostPage post={post}/>
             <Footer menuData={menuData} settings={settings} />
         </>

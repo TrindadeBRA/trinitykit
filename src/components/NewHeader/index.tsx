@@ -36,15 +36,13 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
     // Remove a classe oposta
     const oppositeTheme = theme === 'light' ? 'dark' : 'light';
     htmlElement.classList.remove(oppositeTheme);
-  }, [theme]); // Adicione 'theme' como dependência para que o efeito seja executado sempre que o tema mudar
+  }, [theme]); 
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme-preference', newTheme);
   };
-
-
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -72,11 +70,6 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
     };
   }, [router.events]);
 
-
-
-
-
-
   return (
     <>
       <header
@@ -86,8 +79,8 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
 
           {/* <!-- Logo --> */}
           <Link href="/" className="shrink-0">
-            <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
-            <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
+            <Image width={130} height={85} src="/img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
+            <Image width={130} height={85} src="/img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
           </Link>
 
           {/* <!-- Menu / Actions --> */}
@@ -100,8 +93,8 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
             >
               {/* <!-- Mobile Logo --> */}
               <Link href="/" className="shrink-0">
-                <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
-                <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
+                <Image width={130} height={85} src="/img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
+                <Image width={130} height={85} src="/img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
               </Link>
 
               {/* <!-- Mobile Menu Close --> */}

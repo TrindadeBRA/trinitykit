@@ -18,8 +18,8 @@ export default function Footer({ menuData, settings }: FooterProps) {
             <div className="col-span-full sm:col-span-3 md:col-span-4">
               {/* <!-- Logo --> */}
               <a href="index.html" className="mb-6 inline-block">
-                <Image width={180} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
-                <Image width={180} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
+                <Image width={180} height={85} src="/img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
+                <Image width={180} height={85} src="/img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
               </a>
               <p className="mb-12 text-jacarta-500 dark:text-jacarta-300">
                 Create, sell and collect truly rare digital artworks. Powered by blockchain technology.

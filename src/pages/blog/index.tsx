@@ -1,15 +1,12 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import { GetStaticProps } from "next";
-import { MenuDataType, getMenuData } from "../api/getMenuData";
-import { NextSeo } from "next-seo";
-import { SettingsDataType } from "../api/getSettingsData";
-import { IndexBlogDataType, getIndexBlogData } from "../api/getIndexBlogData";
-import IndexBlog from "@/components/IndexBlog";
-import NewHeader from "@/components/NewHeader";
-import MiniHero from "@/components/MiniHero";
-import LatestPosts from "@/components/LatestPosts";
 import BlogArchive from "@/components/BlogArchive";
+import Footer from "@/components/Footer";
+import MiniHero from "@/components/MiniHero";
+import NewHeader from "@/components/NewHeader";
+import { GetStaticProps } from "next";
+import { NextSeo } from "next-seo";
+import { IndexBlogDataType, getIndexBlogData } from "../api/getIndexBlogData";
+import { MenuDataType, getMenuData } from "../api/getMenuData";
+import { SettingsDataType } from "../api/getSettingsData";
 
 type OurTeamProps = {
   menuData: MenuDataType[];
@@ -26,7 +23,7 @@ export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTe
       />
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={`${settings?.title} - Blog`} />
-      <BlogArchive />
+      <BlogArchive indexBlogData={indexBlogData}/>
       {/* <LatestPosts /> */}
       {/* <IndexBlog indexBlogData={indexBlogData} /> */}
       <Footer menuData={menuData} settings={settings} />
