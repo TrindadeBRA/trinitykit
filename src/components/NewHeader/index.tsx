@@ -6,6 +6,7 @@ import { SettingsDataType } from '@/pages/api/getSettingsData'
 import { MenuDataType } from '@/pages/api/getMenuData'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 interface HeaderProps {
   menuData: MenuDataType[];
@@ -15,6 +16,7 @@ interface HeaderProps {
 export default function NewHeader({ menuData, settings }: HeaderProps) {
 
   const [theme, setTheme] = useState('light');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme-preference');
@@ -24,27 +26,56 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
       const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setTheme(prefersDarkMode ? 'dark' : 'light');
     }
-  
+
     // Seleciona a tag HTML
     const htmlElement: any = document.querySelector('html');
-    
+
     // Adiciona a classe com base no tema atual
     htmlElement.classList.add(theme);
-    
+
     // Remove a classe oposta
     const oppositeTheme = theme === 'light' ? 'dark' : 'light';
     htmlElement.classList.remove(oppositeTheme);
   }, [theme]); // Adicione 'theme' como dependência para que o efeito seja executado sempre que o tema mudar
-  
+
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme-preference', newTheme);
   };
-  
-  
 
-  
+
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    const body: any = document.body;
+    const header: any = document.querySelector('.js-page-header');
+    const mobileMenu: any = document.querySelector('.js-mobile-menu');
+
+    body.classList.toggle('nav-open-noscroll');
+    header.classList.toggle('h-full');
+    header.classList.toggle('js-page-header--is-sticky');
+    mobileMenu.classList.toggle('nav-menu--is-open');
+  };
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      document.body.classList.remove('nav-open-noscroll');
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
+
+
+
+
+
 
   return (
     <>
@@ -76,6 +107,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
               <button
                 className="js-mobile-close group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
                 aria-label="close mobile menu"
+                onClick={toggleMobileMenu}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -276,6 +308,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
             <button
               className="js-mobile-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
               aria-label="open mobile menu"
+              onClick={toggleMobileMenu}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
