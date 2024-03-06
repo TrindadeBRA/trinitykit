@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Head from 'next/head'
@@ -13,6 +13,39 @@ interface HeaderProps {
 }
 
 export default function NewHeader({ menuData, settings }: HeaderProps) {
+
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme-preference');
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(prefersDarkMode ? 'dark' : 'light');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme-preference', newTheme);
+    
+    // Seleciona a tag HTML
+    const htmlElement: any = document.querySelector('html');
+    
+    // Adiciona a nova classe
+    htmlElement.classList.add(newTheme);
+    
+    // Remove a classe oposta
+    const oppositeTheme = newTheme === 'light' ? 'dark' : 'light';
+    htmlElement.classList.remove(oppositeTheme);
+
+  };
+  
+
+  
+
   return (
     <>
       <header
@@ -174,9 +207,8 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
 
               {/* <!-- Dark Mode --> */}
               <a
-                href="#Desktop"
-                className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
-
+                className="js-dark-mode-trigger cursor-pointer group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
+                onClick={toggleTheme}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -211,9 +243,8 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
 
             {/* <!-- Dark Mode --> */}
             <a
-              href="#Mobile"
-              className="js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
-
+              className="js-dark-mode-trigger cursor-pointer group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
+              onClick={toggleTheme}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
