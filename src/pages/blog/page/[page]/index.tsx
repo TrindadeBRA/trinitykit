@@ -18,14 +18,17 @@ type OurTeamProps = {
 }
 
 export default function BlogPage({ menuData, settings, indexBlogData }: OurTeamProps) {
+  const router = useRouter();
+  const { page } = router.query;
   return (
+    
     <>
       <NextSeo
-        title={`${settings?.title} - Blog`}
+        title={`${settings?.title} - Blog -  Pág ${page}`}
         description="Blog description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={`${settings?.title} - Blog`} />
+      <MiniHero title={`${settings?.title} - Blog - Pág ${page}`} />
       <BlogArchive indexBlogData={indexBlogData}/>
       <Footer menuData={menuData} settings={settings} />
     </>

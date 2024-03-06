@@ -42,6 +42,8 @@ jobs:
           echo "# Otherwise, rewrite /foo to /foo/index.html if it exists" >> out/.htaccess
           echo "RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}/index.html -f" >> out/.htaccess
           echo "RewriteRule !\.\w{2,4}$ %{REQUEST_URI}/index.html [L]" >> out/.htaccess
+          echo "# Redirecionar todas as páginas 404 para /404" >> out/.htaccess
+          echo "ErrorDocument 404 /404" >> out/.htaccess
         
       - name: Cache dependencies
         uses: actions/cache@v2
