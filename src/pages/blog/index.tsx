@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
   
   // Defina os parâmetros de paginação conforme necessário
   const page = 1; // Página atual
-  const perPage = 4; // Número de posts por página
+  const perPage = 100; // Número de posts por página
   
   // Passe os parâmetros para getIndexBlogData
   const indexBlogData = await getIndexBlogData(page, perPage);
