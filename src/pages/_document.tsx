@@ -9,7 +9,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="/js/app.bundle.js" defer></script>
+        {/* <script src="/js/app.bundle.js" defer></script> */}
       </body>
     </Html>
   )

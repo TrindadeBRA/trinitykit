@@ -14,7 +14,7 @@ interface HeaderProps {
 
 export default function LatestPosts() {
   return (
-    <section className="relative pt-12 pb-24 bg-jacarta-900">
+    <section className="relative pt-12 pb-24 dark:bg-jacarta-900">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" width={100} height={100}/>
       </picture>
@@ -43,7 +43,7 @@ export default function LatestPosts() {
                   <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
                   >Deothemes</a
                   >
-                  <span className="dark:text-jacarta-400">in</span>
+                  <span className="text-jacarta-600 dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                     <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
@@ -55,7 +55,7 @@ export default function LatestPosts() {
                 >
                   <a href="single-post.html"> Mint your own Tezos collections </a>
                 </h2>
-                <p className="mb-8 dark:text-jacarta-200">
+                <p className="mb-8 text-jacarta-500 dark:text-jacarta-200">
                   Since we launched Tezos at the end of 2021, many awesome creators...
                 </p>
 
@@ -90,7 +90,7 @@ export default function LatestPosts() {
                   <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
                   >Deothemes</a
                   >
-                  <span className="dark:text-jacarta-400">in</span>
+                  <span className="text-jacarta-600 dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                     <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
@@ -102,7 +102,7 @@ export default function LatestPosts() {
                 >
                   <a href="single-post.html">List your collection for secondary sales</a>
                 </h2>
-                <p className="mb-8 dark:text-jacarta-200">
+                <p className="mb-8 text-jacarta-500 dark:text-jacarta-200">
                   Since we launched Tezos at the end of 2021, many awesome creators...
                 </p>
 
@@ -137,7 +137,7 @@ export default function LatestPosts() {
                   <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
                   >Deothemes</a
                   >
-                  <span className="dark:text-jacarta-400">in</span>
+                  <span className="text-jacarta-600 dark:text-jacarta-400">in</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                     <a href="#">NFTS</a>
                     <a href="#">DIGITAL ART</a>
@@ -149,7 +149,7 @@ export default function LatestPosts() {
                 >
                   <a href="single-post.html">The biggest moves in NFTs, Bitcoin, crypto rules</a>
                 </h2>
-                <p className="mb-8 dark:text-jacarta-200">
+                <p className="mb-8 text-jacarta-500 dark:text-jacarta-200">
                   Since we launched Tezos at the end of 2021, many awesome creators...
                 </p>
 
