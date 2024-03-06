@@ -24,8 +24,6 @@ export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTe
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={`${settings?.title} - Blog`} />
       <BlogArchive indexBlogData={indexBlogData}/>
-      {/* <LatestPosts /> */}
-      {/* <IndexBlog indexBlogData={indexBlogData} /> */}
       <Footer menuData={menuData} settings={settings} />
     </>
   )
@@ -48,3 +46,4 @@ export const getStaticProps: GetStaticProps = async () => {
     },
   };
 };
+
