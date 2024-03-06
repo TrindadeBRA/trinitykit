@@ -6,6 +6,8 @@ import { NextSeo } from "next-seo";
 import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
 import { getMenuData } from "../api/getMenuData";
 import BlogPostPage from "@/components/BlogPostPage";
+import NewHeader from "@/components/NewHeader";
+import MiniHero from "@/components/MiniHero";
 
 export default function BlogPost({ menuData, post, settings }: any) {
     return (
@@ -23,7 +25,8 @@ export default function BlogPost({ menuData, post, settings }: any) {
                     }],
                   }}
             />
-            <Header menuData={menuData} settings={settings} />
+            <NewHeader menuData={menuData} settings={settings}/>
+            <MiniHero title={`${post?.title?.rendered}`} />
             <BlogPostPage post={post}/>
             <Footer menuData={menuData} settings={settings} />
         </>
