@@ -83,11 +83,12 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
         className="js-page-header page-header--transparent fixed top-0 z-20 w-full bg-white/[.50] dark:bg-white/[.08] backdrop-blur transition-colors"
       >
         <div className="flex items-center px-6 py-6 xl:px-24">
+
           {/* <!-- Logo --> */}
-          <a href="#" className="shrink-0" id=''>
+          <Link href="/" className="shrink-0">
             <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
             <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
-          </a>
+          </Link>
 
           {/* <!-- Menu / Actions --> */}
           <div
@@ -98,10 +99,10 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
               className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden"
             >
               {/* <!-- Mobile Logo --> */}
-              <a href="#" className="shrink-0">
+              <Link href="/" className="shrink-0">
                 <Image width={130} height={85} src="img/logo-black.webp" className="dark:hidden" alt={settings?.title} />
                 <Image width={130} height={85} src="img/logo-white.webp" className="hidden dark:block" alt={settings?.title} />
-              </a>
+              </Link>
 
               {/* <!-- Mobile Menu Close --> */}
               <button
