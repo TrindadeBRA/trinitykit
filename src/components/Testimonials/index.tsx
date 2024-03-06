@@ -32,7 +32,7 @@ export default function Testimonials() {
           className="flex"
         >
           {Array.from({ length: 3 }).map((_, index) => (
-            <SwiperSlide key={index} className='h-auto'>
+            <SwiperSlide key={index} className='h-auto border border-jacarta-100 dark:border-jacarta-600 rounded-2xl'>
               <div className="flex flex-wrap gap-5 rounded-2.5xl bg-white p-12 dark:bg-jacarta-700 lg:flex-nowrap">
                 <Image
                   width={170}

@@ -15,7 +15,7 @@ export default function Contact() {
           {/* <!-- Contact Form --> */}
           <div className="mb-12 lg:mb-0 lg:w-2/3 lg:pr-12">
             <h2 className="mb-4 font-display text-xl text-jacarta-700 dark:text-white">Contato</h2>
-            <p className="mb-16 text-lg leading-normal dark:text-jacarta-300">
+            <p className="mb-16 text-lg leading-normal lg text-jacarta-500 dark:text-jacarta-300">
               Por favor, utilize o formulário abaixo para entrar em contato, e prometemos responder o mais breve possível.
             </p>
             <form id="contact-form" method="post">
@@ -64,7 +64,7 @@ export default function Contact() {
                   name="agree-to-terms"
                   className="h-5 w-5 self-start rounded border-jacarta-200 text-accent checked:bg-accent focus:ring-accent/20 focus:ring-offset-0 dark:border-jacarta-500 dark:bg-jacarta-600"
                 />
-                <label htmlFor="contact-form-consent-input" className="text-sm dark:text-jacarta-200"
+                <label htmlFor="contact-form-consent-input" className="text-sm lg text-jacarta-500 dark:text-jacarta-200"
                 >Eu concordo com os <a href="tos.html" className="text-accent">Termos de Serviço</a></label>
               </div>
 
@@ -86,10 +86,10 @@ export default function Contact() {
           {/* <!-- Info --> */}
           <div className="lg:w-1/3 lg:pl-5">
             <h2 className="mb-4 font-display text-xl text-jacarta-700 dark:text-white">ResumodoLivro.com</h2>
-            <p className="mb-6 text-lg leading-normal dark:text-jacarta-300">
+            <p className="mb-6 text-lg leading-normal lg text-jacarta-500 dark:text-jacarta-300">
               Aqui no Resumo do Livro, valorizamos imensamente a opinião e a interação com nossos leitores. Se você tem alguma dúvida, sugestão, ou apenas deseja compartilhar suas ideias conosco, estamos ansiosos para ouvi-lo!
             </p>
-
+            {/* 
             <div
               className="rounded-2.5xl border border-jacarta-100 bg-white p-10 dark:border-jacarta-600 dark:bg-jacarta-700"
             >
@@ -166,7 +166,7 @@ export default function Contact() {
                   >
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

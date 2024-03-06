@@ -29,7 +29,7 @@ export default function WhoWeAreCTA() {
             />
             <div className="flex items-center space-x-7">
               <figure className="relative">
-                <img src="img/case-studies/single_case_study_approach.jpg" className="rounded-3xl" alt="" />
+                <img src="img/case-studies/single_case_study_approach.jpg" className="rounded-3xl shadow-lg" alt="" />
               </figure>
             </div>
           </div>
