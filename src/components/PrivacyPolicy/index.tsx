@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
   return (
     <section className="relative py-20 bg-light-base dark:bg-jacarta-800 lg:py-32">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <img src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+        <img src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
       </picture>
       <div className="container">
         <div className="lg:flex lg:items-center lg:justify-between gap-6">

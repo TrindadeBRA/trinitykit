@@ -7,16 +7,7 @@ export const getAllBlogData = async (perPage: number) => {
     const totalPagesData = await totalPagesResponse.json();
     const totalPages = totalPagesData.total_pages;
 
-    // Inicializa um array para armazenar os dados de todos os posts
-    let allPostsData: any = [];
-
-    // Itera por todas as páginas e faz solicitações para o endpoint que retorna os dados dos posts
-    for (let i = 1; i <= totalPages; i++) {
-      const postData = await getIndexBlogData(i, perPage);
-      allPostsData = [...allPostsData, ...postData.recent_posts]; // Concatena os dados dos posts à medida que são obtidos
-    }
-
-    return allPostsData;
+    return totalPages;
 
   } catch (error) {
     console.error('Error fetching all post data:', error);

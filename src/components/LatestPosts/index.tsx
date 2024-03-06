@@ -16,7 +16,7 @@ export default function LatestPosts() {
   return (
     <section className="relative pt-12 pb-24 dark:bg-jacarta-900">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <Image src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" width={100} height={100} />
+        <Image src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" width={100} height={100} />
       </picture>
       <div className="container">
         <h2 className="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">Últimos conteúdos!</h2>

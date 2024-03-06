@@ -10,7 +10,7 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image
           width={370}
-          height={250} src="img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+          height={250} src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
       </picture>
       <div className="container">
         {/* <!-- Featured Post --> */}
@@ -108,9 +108,9 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
         </div>
 
         {/* <!-- Load More --> */}
-        <div className="mt-10 text-center">
+        {/* <div className="mt-10 text-center">
           <a href="#" className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark">Carregar mais</a>
-        </div>
+        </div> */}
       </div>
     </section>
   )
