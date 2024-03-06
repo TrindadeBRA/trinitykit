@@ -6,6 +6,9 @@ import { NextSeo } from "next-seo";
 import { SettingsDataType } from "../api/getSettingsData";
 import { IndexBlogDataType, getIndexBlogData } from "../api/getIndexBlogData";
 import IndexBlog from "@/components/IndexBlog";
+import NewHeader from "@/components/NewHeader";
+import MiniHero from "@/components/MiniHero";
+import LatestPosts from "@/components/LatestPosts";
 
 type OurTeamProps = {
   menuData: MenuDataType[];
@@ -20,7 +23,9 @@ export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTe
         title={`${settings?.title} - Blog`}
         description="Blog description of the page"
       />
-      <Header menuData={menuData} settings={settings} />
+      <NewHeader menuData={menuData} settings={settings}/>
+      <MiniHero title={`${settings?.title} - Blog`} />
+      <LatestPosts />
       <IndexBlog indexBlogData={indexBlogData} />
       <Footer menuData={menuData} settings={settings} />
     </>

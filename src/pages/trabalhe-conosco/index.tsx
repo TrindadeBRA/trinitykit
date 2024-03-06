@@ -5,6 +5,8 @@ import { GetStaticProps } from "next";
 import { MenuDataType, getMenuData } from "../api/getMenuData";
 import { NextSeo } from "next-seo";
 import { SettingsDataType } from "../api/getSettingsData";
+import NewHeader from "@/components/NewHeader";
+import MiniHero from "@/components/MiniHero";
 
 type TrabalheConoscoProps = {
   menuData: MenuDataType[];
@@ -21,7 +23,8 @@ export default function TrabalheConoscoPage({
         title={`${settings?.title} - Trabalhe Conosco`}
         description="Formulário de Trabalhe Conosco"
       />
-      <Header menuData={menuData} settings={settings} />
+      <NewHeader menuData={menuData} settings={settings}/>
+      <MiniHero title={"Trabalhe Conosco"} />
       <WorkWithUsForm />
       <Footer menuData={menuData} settings={settings} />
     </>
