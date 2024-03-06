@@ -33,7 +33,14 @@ export default function OurTeamPage({ menuData, settings, indexBlogData }: OurTe
 
 export const getStaticProps: GetStaticProps = async () => {
   const menuData = await getMenuData();
-  const indexBlogData = await getIndexBlogData();
+  
+  // Defina os parâmetros de paginação conforme necessário
+  const page = 1; // Página atual
+  const perPage = 4; // Número de posts por página
+  
+  // Passe os parâmetros para getIndexBlogData
+  const indexBlogData = await getIndexBlogData(page, perPage);
+
   return {
     props: {
       menuData,

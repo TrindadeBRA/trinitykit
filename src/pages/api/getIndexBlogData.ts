@@ -1,6 +1,7 @@
-export const getIndexBlogData = async () => {
+export const getIndexBlogData = async (page: any, perPage: any) => {
   try {
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/latest-posts`);
+    const url = `${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/latest-posts?page=${page}&per_page=${perPage}`;
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error('Failed to fetch post slugs from API');
