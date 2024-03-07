@@ -9,17 +9,22 @@ import { MenuDataType, getMenuData } from "../../../api/getMenuData";
 import { SettingsDataType } from "../../../api/getSettingsData";
 import { useRouter } from 'next/router';
 import { getAllBlogData } from "@/pages/api/getAllBlogData";
+import BlogPagination from "@/components/BlogPagination";
 
 
-type OurTeamProps = {
+type BlogPageProps = {
   menuData: MenuDataType[];
   settings: SettingsDataType;
   indexBlogData: IndexBlogDataType;
+  totalPagesPagination: any;
 }
 
-export default function BlogPage({ menuData, settings, indexBlogData }: OurTeamProps) {
+export default function BlogPage({ menuData, settings, indexBlogData, totalPagesPagination }: BlogPageProps) {
   const router = useRouter();
   const { page } = router.query;
+
+  const currentPage = Number(page);
+  
   return (
     
     <>
@@ -30,6 +35,7 @@ export default function BlogPage({ menuData, settings, indexBlogData }: OurTeamP
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={`${settings?.title} - Blog - Pág ${page}`} />
       <BlogArchive indexBlogData={indexBlogData}/>
+      <BlogPagination currentPage={currentPage} totalPages={totalPagesPagination}/>
       <Footer menuData={menuData} settings={settings} />
     </>
   )
@@ -62,6 +68,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Passe os parâmetros para getIndexBlogData
   const indexBlogData = await getIndexBlogData(page, perPage);
 
+  // Valor total de paginacoes
+  const totalPagesPagination = await getAllBlogData(perPage);
+
   // Log do número da página
   // console.log("Número da página:", page);
 
@@ -69,6 +78,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       menuData,
       indexBlogData,
+      totalPagesPagination,
     },
   };
 };
