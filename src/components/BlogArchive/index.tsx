@@ -6,7 +6,7 @@ import { IndexBlogDataType } from "@/pages/api/getIndexBlogData"
 export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlogDataType }) {
   // console.log(">>>", indexBlogData)
   return (
-    <section className="relative py-16 md:py-24">
+    <section className="relative py-16">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image
           width={370}
