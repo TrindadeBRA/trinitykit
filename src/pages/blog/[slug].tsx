@@ -1,13 +1,11 @@
 
+import BlogPostPage from "@/components/BlogPostPage";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import NewHeader from "@/components/NewHeader";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
 import { getMenuData } from "../api/getMenuData";
-import BlogPostPage from "@/components/BlogPostPage";
-import NewHeader from "@/components/NewHeader";
-import MiniHero from "@/components/MiniHero";
 
 export default function BlogPost({ menuData, post, settings }: any) {
     console.log(post)
@@ -34,13 +32,15 @@ export default function BlogPost({ menuData, post, settings }: any) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const slugs = await getAllPostSlugs();
+
     const paths = slugs.map((slug: string) => ({ params: { slug } }));
+    
     return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }: any) => {
     const menuData = await getMenuData();
-    const post = await getPostBySlug(params.slug as string); // Função para obter os dados do post com base no slug
+    const post = await getPostBySlug(params.slug as string); 
     return {
         props: {
             menuData,
