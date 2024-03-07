@@ -20,7 +20,7 @@ export default function BlogPost({ menuData, post, settings }: any) {
                     type: 'article',
                     locale: 'pt_BR',
                     images: [{
-                      url: post?.featured_image_url,
+                      url: post?.featured_image_url ? post?.featured_image_url : "",
                     }],
                   }}
             />
