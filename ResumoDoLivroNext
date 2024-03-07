@@ -1,3 +1,13 @@
+Feats
+
+- SEO
+- SiteMap.xml
+
+
+
+
+==//==
+
 Layouts:
 
 - Header - OK (Mockado)
@@ -22,7 +32,7 @@ Layouts:
 
 - Sidebar
 
-- Blog Archive
+- Blog Archive OK
     - Blog (Archive)
         - Hero 
         - Posts + Sidebar
@@ -30,7 +40,7 @@ Layouts:
     - Blog Author (Archive)
 
 - Blog Post
-    - Hero
+    - Hero 
     - Post Content
     - Sidebar
     - Bio do Autor
@@ -39,25 +49,7 @@ Layouts:
     - Recomendado
     - Comentario (Sem prioridade)
 
-- 404
-
-==//==
-
-API
-Dados para o BlogPost
-
-- Autor
-    - Nome
-    - Imagem Gravatar
-    - BIO
-- Post
-    - Data de publicação
-    - Tempo de leitura (Sem prioridade)
-    - Categorias
-    - Slug
-- Posts Relacionados
-
-
+- 404 OK
 
 ==//==
 
