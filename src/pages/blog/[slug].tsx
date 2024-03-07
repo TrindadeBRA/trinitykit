@@ -12,13 +12,13 @@ export default function BlogPost({ menuData, post, settings }: any) {
     return (
         <>
             <NextSeo
-                title={post?.yoast_title || post?.title}
-                description={post?.yoast_description || post?.excerpt}
+                title={post?.yoast_title}
+                description={post?.yoast_description}
                 openGraph={{
                     type: 'article',
                     locale: 'pt_BR',
                     images: [{
-                      url: post?.featured_image_url ? post?.featured_image_url : "",
+                      url: post?.post_thumbnail_url ? post?.post_thumbnail_url : "/ogimage.webp",
                     }],
                   }}
             />

@@ -6,7 +6,7 @@ export const getIndexBlogData = async (page: any, perPage: any) => {
     if (!response.ok) {
       throw new Error('Failed to fetch post slugs from API');
     }
-    
+
     const postData = await response.json();
 
     return postData;
@@ -22,15 +22,21 @@ export type IndexBlogDataType = {
     title: string;
     subtitle: string;
   };
-  recent_posts: {
-    id: number;
-    title: string;
-    content: string;
-    thumbnail_url: string;
-    date: string;
-    category: string;
-    author_name: string;
-    author_photo: string;
-    slug: string;
-  }[];
+  recent_posts: RecentPostType[];
+};
+
+export type RecentPostType = {
+  id: number;
+  title: string;
+  content: string;
+  post_thumbnail_url: string;
+  date: string;
+  author: {
+    name: string;
+    avatar: string;
+    bio: string;
+  };
+  categories: string[];
+  yoast_title: string;
+  yoast_description: string;
 };
