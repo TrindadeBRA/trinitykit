@@ -10,18 +10,17 @@ import NewHeader from "@/components/NewHeader";
 import MiniHero from "@/components/MiniHero";
 
 export default function BlogPost({ menuData, post, settings }: any) {
+    console.log(post)
     return (
         <>
             <NextSeo
-                title={post?.yoast_head_json?.og_title}
-                description={post?.yoast_head_json?.og_description}
+                title={post?.yoast_title || post?.title}
+                description={post?.yoast_description || post?.excerpt}
                 openGraph={{
                     type: 'article',
                     locale: 'pt_BR',
                     images: [{
-                      url: post?.yoast_head_json?.og_image[0]?.url,
-                      width: post?.yoast_head_json?.og_image[0]?.width,
-                      height: post?.yoast_head_json?.og_image[0]?.height,
+                      url: post?.featured_image_url,
                     }],
                   }}
             />
