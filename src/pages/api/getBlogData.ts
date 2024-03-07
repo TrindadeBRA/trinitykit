@@ -59,7 +59,7 @@ export const getAllPostSlugs = async () => {
 
 export const getPostBySlug = async (slug: string) => {
   try {
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?slug=${slug}`);
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/post/${slug}`);
     
     if (!response.ok) {
       throw new Error('Failed to fetch post data from API');
