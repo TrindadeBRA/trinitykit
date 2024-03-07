@@ -8,7 +8,7 @@ import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
 import { getMenuData } from "../api/getMenuData";
 
 export default function BlogPost({ menuData, post, settings }: any) {
-    console.log(post)
+    // console.log(post)
     return (
         <>
             <NextSeo
