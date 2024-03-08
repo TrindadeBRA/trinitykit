@@ -35,8 +35,6 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
               >
                 {/* <!-- Meta --> */}
                 <div className="mb-3 flex flex-wrap items-center space-x-1 text-xs">
-                  <Link href={"/blog/" + post?.slug} className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200">{post?.author_name}</Link>
-                  <span className="text-jacarta-500 dark:text-jacarta-300">em</span>
                   <span className="inline-flex flex-wrap items-center space-x-1 text-accent"><a href="#">{post?.category}</a></span>
                 </div>
 
@@ -51,6 +49,21 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
                 <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
                   <span><time dateTime="2022-02-05">{post?.date}</time></span>
                 </div>
+
+                <figcaption className="mt-10 flex items-center gap-x-3">
+                  <Image
+                    width={56}
+                    height={56}
+                    className="h-14 w-14 rounded-full bg-gray-800"
+                    src={post?.author_photo}
+                    alt=""
+                  />
+                  <div className="text-base">
+                    <Link href={"/blog/" + post?.slug} className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200">{post?.author_name}</Link>
+                    <div className="text-xs text-jacarta-700 dark:text-jacarta-200">ResumoDoLivro.com</div>
+                  </div>
+                </figcaption>
+
               </div>
             </div>
           </article>
@@ -105,7 +118,7 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
                       alt=""
                     />
                     <div className="text-base">
-                    <Link href={"/blog/" + post?.slug} className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200">{post?.author_name}</Link>
+                      <Link href={"/blog/" + post?.slug} className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200">{post?.author_name}</Link>
                       <div className="text-xs text-jacarta-700 dark:text-jacarta-200">ResumoDoLivro.com</div>
                     </div>
                   </figcaption>
