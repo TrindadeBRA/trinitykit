@@ -29,7 +29,7 @@ export default function WhoWeAreCTA() {
             />
             <div className="flex items-center space-x-7">
               <figure className="relative">
-                <Image width={570} height={470} src="img/case-studies/single_case_study_approach.jpg" className="rounded-3xl shadow-lg" alt="" />
+                <Image width={570} height={470} src="img/case-studies/quem-somos-peter-pan.webp" className="rounded-3xl shadow-lg" alt="" />
               </figure>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function WhoWeAreCTA() {
           <div className="py-10 lg:w-1/2 lg:pl-20">
             <h2 className="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">Descubra quem somos </h2>
             <p className="mb-8 text-jacarta-500 dark:text-jacarta-300"> Bem-vindo à nossa jornada literária, onde desbravamos mundos através das páginas e compartilhamos o amor pelos livros.</p>
-            <a href="#" className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume">Explore agora</a>
+            <Link href="/quem-somos" className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume">Explore agora</Link>
           </div>
         </div>
       </div>

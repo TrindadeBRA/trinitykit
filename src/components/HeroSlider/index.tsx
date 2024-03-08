@@ -42,10 +42,10 @@ export default function HeroSlider() {
                                     </clipPath>
                                 </defs>
                                 <g clipPath="url(#clipping)">
-                                    <image href="img/hero/hero.jpg" width="200" height="200" clipPath="url(#clipping)" />
+                                    <image href="img/hero/hero.webp" width="200" height="200" clipPath="url(#clipping)" />
                                 </g>
                             </svg>
-                            <Image width={1000} height={1000} src="img/hero/3D_elements.png" alt="" className="absolute top-0 animate-fly md:-right-[10%] " />
+                            <Image width={1000} height={1000} src="img/hero/3D_elements.webp" alt="" className="absolute top-0 animate-fly md:-right-[10%] " />
                         </div>
                     </div>
                 </div>
