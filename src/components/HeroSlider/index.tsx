@@ -6,10 +6,10 @@ export default function HeroSlider() {
     return (
         <section className="relative h-[100vh]">
             <picture className="pointer-events-none absolute left-0 right-0 top-0 bottom-0 -z-10 dark:hidden">
-                <img src="img/gradient.jpg" alt="gradient" className="w-full h-full object-cover" />
+                <Image width={1920} height={900} src="img/gradient.jpg" alt="gradient" className="w-full h-full object-cover" />
             </picture>
             <picture className="pointer-events-none absolute left-0 right-0 top-0 bottom-0 -z-10 hidden dark:block">
-                <img src="img/gradient_dark.jpg" alt="gradient dark" className="w-full h-full object-cover" />
+                <Image width={1920} height={900} src="img/gradient_dark.jpg" alt="gradient dark" className="w-full h-full object-cover" />
             </picture>
 
             <div className="container h-full">
@@ -45,7 +45,7 @@ export default function HeroSlider() {
                                     <image href="img/hero/hero.webp" width="200" height="200" clipPath="url(#clipping)" />
                                 </g>
                             </svg>
-                            <Image width={1000} height={1000} src="img/hero/3D_elements.webp" alt="" className="absolute top-0 animate-fly md:-right-[10%] " />
+                            <Image  width={1000} height={1000} src="img/hero/3D_elements.webp" priority alt="" className="absolute top-0 animate-fly md:-right-[10%] " />
                         </div>
                     </div>
                 </div>

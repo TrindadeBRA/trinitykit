@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section className="relative py-24 dark:bg-jacarta-800">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <img src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+        <Image width={1920} height={900} src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
       </picture>
       <div className="container">
         <div className="lg:flex">

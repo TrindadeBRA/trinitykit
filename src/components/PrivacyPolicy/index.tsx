@@ -1,24 +1,17 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Head from 'next/head'
-import { SettingsDataType } from '@/pages/api/getSettingsData'
-import { MenuDataType } from '@/pages/api/getMenuData'
-import Link from 'next/link'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function PrivacyPolicy() {
   return (
     <section className="relative py-20 bg-light-base dark:bg-jacarta-800 lg:py-32">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <img src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
+        <Image width={1920} height={900} src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
       </picture>
       <div className="container">
         <div className="lg:flex lg:items-center lg:justify-between gap-6">
-
           <div className="lg:w-full">
             <h2 className="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">Quem somos</h2>
-            <p className="mb-8 text-jacarta-500 dark:text-jacarta-300">O endereço do nosso site é: <a href="https://resumodolivro.com">https://resumodolivro.com</a>.</p>
+            <p className="mb-8 text-jacarta-500 dark:text-jacarta-300">O endereço do nosso site é: <Link href="https://resumodolivro.com">https://resumodolivro.com</Link>.</p>
             <h2 className="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">Comentários</h2>
             <p className="mb-8 text-jacarta-500 dark:text-jacarta-300">Quando os visitantes deixam comentários no site, coletamos os dados mostrados no formulário de comentários, além do endereço de IP e de dados do navegador do visitante, para auxiliar na detecção de spam.</p>
             <p className="mb-8 text-jacarta-500 dark:text-jacarta-300">Uma sequência anonimizada de caracteres criada a partir do seu e-mail (também chamada de hash) poderá ser enviada para o Gravatar para verificar se você usa o serviço. A política de privacidade do Gravatar está disponível <a href="https://automattic.com/privacy/">aqui</a>. Depois da aprovação do seu comentário, a foto do seu perfil fica visível publicamente junto de seu comentário.</p>
