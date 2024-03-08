@@ -19,6 +19,11 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@builder.io/partytown@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.10.0.tgz#ce2caa275f1fed355c3aefd49790dc2ff29b88c6"
+  integrity sha512-OS/o9lAmK5rZZLkjFmghPNmp3P40uTF5yu2rFY3TVlnSie7CQhwrQ+5lycUkHqrDVyI4NOnOiA655Q1eGPE2pw==
+
 "@corex/deepmerge@^4.0.43":
   version "4.0.43"
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-4.0.43.tgz#9bd42559ebb41cc5a7fb7cfeea5f231c20977dca"
