@@ -19,7 +19,7 @@ type BlogPageProps = {
 }
 
 export default function BlogPage({ menuData, settings, indexBlogData, totalPagesPagination }: BlogPageProps) {
-
+  console.log(indexBlogData)
   const currentPage = Number(1);
   return (
     <>
