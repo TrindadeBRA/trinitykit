@@ -29,7 +29,7 @@ export default function BlogPage({ menuData, settings, indexBlogData, totalPages
     
     <>
       <NextSeo
-        title={`${settings?.title} - Blog -  Pág ${page}`}
+        title={`${settings?.title} - Blog -  Página: ${page}`}
         description="Blog description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
