@@ -12,7 +12,8 @@ interface HeaderProps {
   settings: SettingsDataType;
 }
 
-export default function LatestPosts() {
+export default function LatestPosts({ indexBlogData }: any) {
+  // console.log(indexBlogData)
   return (
     <section className="relative pt-12 pb-24 dark:bg-jacarta-900">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
@@ -21,18 +22,18 @@ export default function LatestPosts() {
       <div className="container">
         <h2 className="mb-12 text-center font-display text-3xl text-jacarta-700 dark:text-white">Últimos conteúdos!</h2>
         <div className="grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2 md:grid-cols-3">
-          {Array.from({ length: 3 }).map((_, index) => (
+          {Object.values(indexBlogData?.recent_posts).map((post: any, index) => (
             <article key={index}>
               <div className="overflow-hidden rounded-2.5xl transition-shadow shadow-md hover:shadow-lg">
                 <figure className="group overflow-hidden">
-                  <a href="single-post.html">
+                  <Link href={"/blog/" + post?.slug}>
                     <Image
                       width={100} height={100}
-                      src="img/blog/post_2.jpg"
+                      src={post?.thumbnail_url ? post?.thumbnail_url : "/img/blog/post_2.jpg"}
                       alt="post 2"
                       className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
                     />
-                  </a>
+                  </Link>
                 </figure>
 
                 {/* <!-- Body --> */}
@@ -41,30 +42,27 @@ export default function LatestPosts() {
                 >
                   {/* <!-- Meta --> */}
                   <div className="mb-3 flex flex-wrap items-center space-x-1 text-xs">
-                    <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
-                    >Deothemes</a
-                    >
-                    <span className="text-jacarta-600 dark:text-jacarta-400">in</span>
+                    {/* <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200">Deothemes</a> */}
                     <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
-                      <a href="#">NFTS</a>
-                      <a href="#">DIGITAL ART</a>
+                      {post?.category}
                     </span>
                   </div>
 
                   <h2
                     className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                   >
-                    <a href="single-post.html"> Mint your own Tezos collections </a>
+                    <Link href={"/blog/" + post?.slug}> {post?.title} </Link>
                   </h2>
-                  <p className="mb-8 text-jacarta-500 dark:text-jacarta-200">
-                    Since we launched Tezos at the end of 2021, many awesome creators...
-                  </p>
+                  <Link href={"/blog/" + post?.slug}>
+                    <p className="mb-8 text-jacarta-500 dark:text-jacarta-200">
+                      {post?.content}
+                    </p>
+                  </Link>
+
 
                   {/* <!-- Date / Time --> */}
                   <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                    <span><time dateTime="2022-02-05">5 Feb</time></span>
-                    <span>•</span>
-                    <span>3 min read</span>
+                    <Link href={"/blog/" + post?.slug}> <span><time dateTime="2022-02-05">{post?.date}</time></span> </Link>
                   </div>
                 </div>
               </div>
