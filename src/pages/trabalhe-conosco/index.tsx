@@ -1,12 +1,11 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import MiniHero from "@/components/MiniHero";
+import NewHeader from "@/components/NewHeader";
 import WorkWithUsForm from "@/components/WorkWithUsForm";
 import { GetStaticProps } from "next";
-import { MenuDataType, getMenuData } from "../api/getMenuData";
 import { NextSeo } from "next-seo";
+import { MenuDataType, getMenuData } from "../api/getMenuData";
 import { SettingsDataType } from "../api/getSettingsData";
-import NewHeader from "@/components/NewHeader";
-import MiniHero from "@/components/MiniHero";
 
 type TrabalheConoscoProps = {
   menuData: MenuDataType[];
@@ -24,7 +23,7 @@ export default function TrabalheConoscoPage({
         description="Formulário de Trabalhe Conosco"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Trabalhe Conosco"} />
+      <MiniHero title={"Trabalhe Conosco"} slug={"/trabalhe-conosco"}/>
       <WorkWithUsForm />
       <Footer menuData={menuData} settings={settings} />
     </>

@@ -1,20 +1,13 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HeroSection from "@/components/Hero";
+import MiniHero from "@/components/MiniHero";
+import NewHeader from "@/components/NewHeader";
+import PrivacyPolicy from "@/components/PrivacyPolicy";
+import Testimonials from "@/components/Testimonials";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { HomeDataType, getHomeData } from ".././api/getHomeData";
 import { MenuDataType, getMenuData } from ".././api/getMenuData";
 import { SettingsDataType } from ".././api/getSettingsData";
-import NewHeader from "@/components/NewHeader";
-import MiniHero from "@/components/MiniHero";
-import HeroSlider from "@/components/HeroSlider";
-import LatestPosts from "@/components/LatestPosts";
-import WhoWeAreCTA from "@/components/WhoWeAreCTA";
-import Testimonials from "@/components/Testimonials";
-import WhoWeAre from "@/components/WhoWeAre";
-import Contact from "@/components/Contact";
-import PrivacyPolicy from "@/components/PrivacyPolicy";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 
@@ -32,7 +25,7 @@ export default function PoliticaDePrivacidade({ menuData, homeData, settings }: 
         description="Home page description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Política de privacidade"} />
+      <MiniHero title={"Política de privacidade"} slug={"/politica-de-privacidade"} />
       <PrivacyPolicy />
       <Testimonials />
       <Footer menuData={menuData} settings={settings} />

@@ -33,7 +33,7 @@ export default function BlogPage({ menuData, settings, indexBlogData, totalPages
         description="Blog description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={`${settings?.title} - Blog - Pág ${page}`} />
+      <MiniHero title={"Blog"} slug={`/blog/page/${page}`} />
       <BlogArchive indexBlogData={indexBlogData}/>
       <BlogPagination currentPage={currentPage} totalPages={totalPagesPagination}/>
       <Footer menuData={menuData} settings={settings} />
