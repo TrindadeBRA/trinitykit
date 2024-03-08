@@ -29,7 +29,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
               </p> */}
               {/* <!-- Socials --> */}
               <div className="flex space-x-5">
-                <Link href="https://www.facebook.com/resumodolivro0" target='_blank' className="group">
+                <Link href="https://www.facebook.com/resumodolivro0" target='_blank' className="group" aria-label='Facebook'>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -45,7 +45,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
                     ></path>
                   </svg>
                 </Link>
-                <Link href="https://www.instagram.com/resumodolivro_/" target='_blank' className="group">
+                <Link href="https://www.instagram.com/resumodolivro_/" target='_blank' className="group" aria-label='Instagram'>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -61,7 +61,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
                     ></path>
                   </svg>
                 </Link>
-                <Link href="https://www.tiktok.com/@resumo.do.livro?lang=pt-BR" target='_blank' className="group">
+                <Link href="https://www.tiktok.com/@resumo.do.livro?lang=pt-BR" target='_blank' className="group" aria-label='Tiktok'>
                   <svg
                     aria-hidden="true"
                     focusable="false"
