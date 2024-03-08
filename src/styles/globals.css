@@ -99,6 +99,14 @@ body {
   margin-bottom: 1em;
 }
 
+#blog-content p.wp-caption-text {
+  color: #855dfe;
+  font-family: CalSans-SemiBold,sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
 #blog-content ul {
   margin-bottom: 1em;
 }
@@ -138,9 +146,7 @@ body {
   margin: 0 auto;
 }
 
-#blog-content [class^="wp-image"] {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-color: #10b981;
-  padding: 30px;
+#blog-content .wp-caption {
+  padding-top: 1rem!important;
+  padding-bottom: 1rem!important;
 }
