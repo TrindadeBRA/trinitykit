@@ -53,12 +53,23 @@ body {
 .light #blog-content h3,
 .light #blog-content h4,
 .light #blog-content h5,
-.light #blog-content h6,
+.light #blog-content h6
+{
+  color: #131740
+}
+
+.dark #blog-content p,
+.dark #blog-content ul,
+.dark #blog-content li
+{
+  color: #A1A2B3
+}
+
 .light #blog-content p,
 .light #blog-content ul,
 .light #blog-content li
 {
-  color: #000
+  color: #5A5D79
 }
 
 
