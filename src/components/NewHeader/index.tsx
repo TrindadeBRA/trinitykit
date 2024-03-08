@@ -297,6 +297,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
                 />
               </svg>
             </button>
+            
 
             {/* <!-- Mobile Menu Toggle --> */}
             <button
