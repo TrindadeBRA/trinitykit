@@ -1,11 +1,11 @@
 export const getTotalPages = async () => {
   try {
     const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?per_page=1`);
-    
+
     if (!response.ok) {
       throw new Error('Failed to fetch total pages from API');
     }
-    
+
     const totalPages: any = response.headers.get('X-WP-TotalPages');
 
     return parseInt(totalPages);
@@ -17,39 +17,18 @@ export const getTotalPages = async () => {
 
 export const getAllPostSlugs = async () => {
   try {
-    const totalPages = await getTotalPages();
-    let allSlugs: any = [];
-
-    // Se houver mais de uma página de posts, faça várias solicitações
-    if (Number(totalPages) > 1) {
-      for (let page = 1; page <= Number(totalPages); page++) {
-        const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?per_page=1&page=${page}`);
-        
-        if (!response.ok) {
-          throw new Error('Failed to fetch post slugs from API ZZZZZZZZZzz');
-        }
-        
-        const postData = await response.json();
-        
-        // Mapeia os slugs dos posts da página atual e adiciona ao array
-        const slugs = postData.map((post: any) => post.slug);
-        allSlugs = allSlugs.concat(slugs);
-      }
-    } else {
-      // Se houver apenas uma página de posts, faça uma única solicitação
-      const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/posts?per_page=1`);
-      
-      if (!response.ok) {
-        throw new Error('Failed to fetch post slugs from API YYYYYYYY');
-      }
-      
-      const postData = await response.json();
-      
-      // Mapeia os slugs dos posts e adiciona ao array
-      allSlugs = postData.map((post: any) => post.slug);
+    const url = `${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/all-slugs`;
+    // console.log(`Fetching slugs from ${url}`);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch post slugs from API`);
     }
+    const responseData = await response.json();
 
-    return allSlugs;
+    // Extrair os slugs do array de slugs retornado pela API
+    const slugs = responseData.last_five_slugs;
+
+    return slugs;
   } catch (error) {
     console.error('Error fetching post slugs:', error);
     throw error;
@@ -57,11 +36,12 @@ export const getAllPostSlugs = async () => {
 };
 
 
+
 export const getPostBySlug = async (slug: string) => {
   try {
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/post/${slug}`);    
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/post/${slug}`);
     if (!response.ok) {
-      throw new Error('Failed to fetch post data from API XXXXXXXX' );
+      throw new Error('Failed to fetch post data from API XXXXXXXX');
     }
     const postData = await response.json();
 
