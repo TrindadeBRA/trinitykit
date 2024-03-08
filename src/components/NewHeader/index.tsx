@@ -235,6 +235,8 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
               <button
                 className="js-dark-mode-trigger cursor-pointer group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
                 onClick={toggleTheme}
+                aria-label="Ativar/desativar modo escuro"
+                
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -271,6 +273,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
             <button
               className="js-dark-mode-trigger cursor-pointer group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border border-jacarta-200 dark:border-transparent bg-white dark:bg-white/[.15] transition-colors hover:bg-accent focus:bg-accent"
               onClick={toggleTheme}
+              aria-label="Ativar/desativar modo escuro"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +300,7 @@ export default function NewHeader({ menuData, settings }: HeaderProps) {
                 />
               </svg>
             </button>
-            
+
 
             {/* <!-- Mobile Menu Toggle --> */}
             <button
