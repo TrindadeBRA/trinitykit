@@ -23,7 +23,7 @@ export default function TrabalheConoscoPage({
         description="Formulário de Trabalhe Conosco"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Trabalhe Conosco"} slug={"/trabalhe-conosco"}/>
+      <MiniHero title={"Trabalhe Conosco"} slug={"trabalhe-conosco"}/>
       <WorkWithUsForm />
       <Footer menuData={menuData} settings={settings} />
     </>

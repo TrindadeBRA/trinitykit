@@ -25,7 +25,7 @@ export default function TrabalheConoscoPage({
         description="404 - Página não encontrada!"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Página 404"} slug={"/404"} />
+      <MiniHero title={"Página 404"} slug={"404"} />
       <Body404 />
       <Footer menuData={menuData} settings={settings} />
     </>

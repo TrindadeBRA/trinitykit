@@ -25,7 +25,7 @@ export default function QuemSomos({ menuData, homeData, settings }: HomeProps) {
         description="Home page description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Quem Somos"} slug={"/quem-somos"}/>
+      <MiniHero title={"Quem Somos"} slug={"quem-somos"}/>
       <WhoWeAre />
       <Testimonials />
       <Footer menuData={menuData} settings={settings} />

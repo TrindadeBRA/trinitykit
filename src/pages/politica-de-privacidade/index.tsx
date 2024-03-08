@@ -25,7 +25,7 @@ export default function PoliticaDePrivacidade({ menuData, homeData, settings }: 
         description="Home page description of the page"
       />
       <NewHeader menuData={menuData} settings={settings}/>
-      <MiniHero title={"Política de privacidade"} slug={"/politica-de-privacidade"} />
+      <MiniHero title={"Política de privacidade"} slug={"politica-de-privacidade"} />
       <PrivacyPolicy />
       <Testimonials />
       <Footer menuData={menuData} settings={settings} />
