@@ -9,7 +9,7 @@ export default function BlogPostHero({ post }: any) {
 
   const pages = [
     { name: "Blog", href: "/blog", current: false },
-    { name: post?.title && post?.title.length > 30 ? post?.title.slice(0, 30) + "..." : post?.title, href: `/blog/${post?.slug}`, current: true },
+    { name: post?.title && post?.title.length > 30 ? post?.title.slice(0, 30) + "..." : post?.title, href: `blog/${post?.slug}`, current: true },
   ];
 
   return (
