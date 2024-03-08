@@ -26,7 +26,7 @@ export const getAllPostSlugs = async () => {
     const responseData = await response.json();
 
     // Extrair os slugs do array de slugs retornado pela API
-    const slugs = responseData.last_five_slugs;
+    const slugs = responseData.slugs;
 
     return slugs;
   } catch (error) {
