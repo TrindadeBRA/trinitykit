@@ -18,8 +18,8 @@ export default function MiniHero({ title, slug }: any) {
         <div className="container relative z-10">
           <h1 className="text-center font-display text-4xl font-medium text-white">{title}</h1>
         </div>
-        <div className="container z-50 justify-center flex mt-4">
-          <nav className="flex z-50" aria-label="Breadcrumb">
+        <div className="container z-10 justify-center flex mt-4">
+          <nav className="flex z-10" aria-label="Breadcrumb">
             <ol role="list" className="flex items-center space-x-4 text-white">
               <li>
                 <Link href={"/"} className="cursor-pointer ">
