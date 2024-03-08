@@ -10,6 +10,35 @@ SwiperCore.use([Pagination]);
 
 export default function Testimonials() {
 
+  const testimonialsData: any = {
+    "testimonials": [
+      {
+        "message": "Se não fosse pelo seu blog, eu não teria descoberto tantos livros incríveis. Obrigado por compartilhar suas recomendações!",
+        "name": "Ana Silva",
+        "profession": "Estudante Universitária",
+        "image": "/img/testimonials/ana-silva.webp"
+      },
+      {
+        "message": "Seus resumos de livros são sempre tão bem escritos e úteis. Eles me ajudaram a economizar tempo e a escolher minhas próximas leituras com mais confiança.",
+        "name": "Carlos Oliveira",
+        "profession": "Analista de Marketing",
+        "image": "/img/testimonials/carlos-oliveira.webp"
+      },
+      {
+        "message": "Adoro as listas de livros temáticas do seu blog. Elas me deram ótimas ideias para montar minha lista de leitura para o ano.",
+        "name": "Isabella Santos",
+        "profession": "Designer Gráfico",
+        "image": "/img/testimonials/isabella-santos.webp"
+      },
+      {
+        "message": "Seu blog me inspira a ler mais e explorar diferentes gêneros literários. Adoro como você diversifica suas recomendações.",
+        "name": "Lucas Costa",
+        "profession": "Engenheiro de Software",
+        "image": "/img/testimonials/lucas-costa.webp"
+      }
+    ]
+  }
+  
   return (
     <section className="bg-light-base py-24 dark:bg-jacarta-900">
       <div className="container relative overflow-hidden">
@@ -31,13 +60,13 @@ export default function Testimonials() {
           }}}
           className="flex"
         >
-          {Array.from({ length: 3 }).map((_, index) => (
+          {testimonialsData.testimonials.map((testimonial: any, index: any) => (
             <SwiperSlide key={index} className='h-auto border border-jacarta-100 dark:border-jacarta-600 rounded-2xl'>
               <div className="flex flex-wrap gap-5 rounded-2.5xl bg-white p-12 dark:bg-jacarta-700 lg:flex-nowrap">
                 <Image
                   width={170}
                   height={170}
-                  src="img/testimonials/testimonial_1.jpg"
+                  src={testimonial.image}
                   alt=""
                   className="w-28 self-start rounded-2.5xl"
                 />
@@ -111,11 +140,9 @@ export default function Testimonials() {
                       />
                     </svg>
                   </div>
-                  <p className="text-md leading-normal text-jacarta-700 dark:text-white">
-                    Xhibiter is one of the most exciting, if youre interested in shaping a new business model for creators, this is the team to join.
-                  </p>
-                  <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">Katie Smith</span>
-                  <span className="text-2xs font-medium tracking-tight text-jacarta-500 dark:text-jacarta-400">General Partner at Entrepreneur</span>
+                  <p className="text-sm leading-normal text-jacarta-700 dark:text-white">{testimonial.message}</p>
+                  <span className="mt-6 block font-display text-sm font-medium text-jacarta-700 dark:text-white">{testimonial.name}</span>
+                  <span className="text-2xs font-medium tracking-tight text-jacarta-500 dark:text-jacarta-400">{testimonial.profession}</span>
                 </div>
               </div>
             </SwiperSlide>

@@ -30,7 +30,7 @@ export default function WhoWeAre() {
           <div className="py-10 lg:w-4/12 border-2 p-8 border-jacarta-100 dark:border-jacarta-600">
             <h2 className="mb-6 font-display text-3xl text-jacarta-700 dark:text-white">Desvende mundos literários em minutos! </h2>
             <p className="mb-8 text-jacarta-500 dark:text-jacarta-300">Explore o universo de conhecimento condensado do Resumo do Livro! Desvende histórias, ideias e lições dos melhores livros, sem sacrificar sua rotina agitada. Embarque em uma jornada intelectual única – clique abaixo para encontrar novos horizontes literários em poucos minutos. Amplie seus horizontes agora!</p>
-            <a href="#" className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume">Visualizar Resumos</a>
+            <Link href="/blog" className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume">Visualizar Resumos</Link>
           </div>
         </div>
       </div>

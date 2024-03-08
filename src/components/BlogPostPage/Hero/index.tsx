@@ -5,9 +5,11 @@ import Link from "next/link";
 export default function BlogPostHero({ post }: any) {
   // console.log(">>>", post)
 
+  const truncatedTitle = post?.title && post?.title.length > 40 ? post?.title.slice(0, 40) + "..." : post?.title;
+
   const pages = [
     { name: "Blog", href: "/blog", current: false },
-    { name: post?.title, href: `/blog/${post?.slug}`, current: true },
+    { name: post?.title && post?.title.length > 30 ? post?.title.slice(0, 30) + "..." : post?.title, href: `/blog/${post?.slug}`, current: true },
   ];
 
   return (
