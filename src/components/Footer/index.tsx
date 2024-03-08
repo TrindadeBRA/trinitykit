@@ -3,6 +3,7 @@ import { SettingsDataType } from '@/pages/api/getSettingsData';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import AdBanner from '../AdBanner';
 
 interface FooterProps {
   menuData: MenuDataType[];
@@ -103,8 +104,13 @@ export default function Footer({ menuData, settings }: FooterProps) {
               </ul>
             </div>
 
-            <div className="col-span-full sm:col-span-3 md:col-span-3">
+            <div className="col-span-full sm:col-span-3 md:col-span-3 text-jacarta-700 dark:text-white">
               [ADS 270x205]
+              <AdBanner
+                data-ad-slot="9990805939"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              />
             </div>
           </div>
 
@@ -115,7 +121,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
               <li><Link href="/politica-de-privacidade" className="hover:text-accent dark:hover:text-white">Política de Privacidade</Link></li>
             </ul>
           </div>
-          
+
         </div>
       </footer>
     </>
