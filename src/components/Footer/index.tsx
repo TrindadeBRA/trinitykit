@@ -99,7 +99,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
                 <AdBanner
                   data-ad-slot="9990805939"
                   data-ad-format="auto"
-                  style={{ width: "670px", height: "150px" }}
+                  style={{ height: 150 }}
                 />
               </div>
             </div>
