@@ -105,8 +105,6 @@ export default function Footer({ menuData, settings }: FooterProps) {
 
             <div className="col-span-full sm:col-span-7 text-jacarta-700 dark:text-white">
               [ADS 670x149]
-              <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9804371639852685"
-                  crossOrigin="anonymous"></Script>
               {/* <!-- Footer --> */}
               <ins className="adsbygoogle"
                   style={{display:"inline-block", width:"670px", height:"149px"}}

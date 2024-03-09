@@ -5,12 +5,12 @@ export default function Document() {
   return (
     <Html lang="pt-BR" className="scroll-smooth">
       <Head>
-        <Script
+        {/* <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
           strategy="afterInteractive"
           crossOrigin="anonymous"
-        />
+        /> */}
       </Head>
       <body className="bg-light-base dark:bg-jacarta-900">
         <Main />
