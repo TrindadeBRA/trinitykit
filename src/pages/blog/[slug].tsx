@@ -6,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
 import { getMenuData } from "../api/getMenuData";
+import BlogRelatedPost from "@/components/BlogRelatedPost";
 
 export default function BlogPost({ menuData, post, settings }: any) {
     // console.log(post)
@@ -24,6 +25,7 @@ export default function BlogPost({ menuData, post, settings }: any) {
             />
             <NewHeader menuData={menuData} settings={settings}/>
             <BlogPostPage post={post}/>
+            <BlogRelatedPost post={post} />
             <Footer menuData={menuData} settings={settings} />
         </>
     );
