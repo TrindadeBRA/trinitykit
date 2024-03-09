@@ -4,64 +4,7 @@ import Link from 'next/link'
 
 
 export default function BlogRelatedPost({ post }: any) {
-
-  const posts = [
-    {
-      id: 1,
-      title: 'Boost your conversion rate',
-      category: 'Conheça',
-      href: '#',
-      description:
-        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      author: {
-        name: 'Michael Foster',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
-    },
-    {
-      id: 2,
-      title: 'Boost your conversion rate',
-      category: 'Conheça',
-      href: '#',
-      description:
-        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      author: {
-        name: 'Michael Foster',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
-    },
-    {
-      id: 3,
-      title: 'Boost your conversion rate',
-      category: 'Conheça',
-      href: '#',
-      description:
-        'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-      date: 'Mar 16, 2020',
-      datetime: '2020-03-16',
-      author: {
-        name: 'Michael Foster',
-        imageUrl:
-          'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      },
-    },
-    // More posts...
-  ]
-
   // console.log(post?.related_posts)
-
   return (
     <div className="border border-jacarta-100 dark:border-jacarta-600 bg-light-base dark:bg-jacarta-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -115,10 +58,8 @@ export default function BlogRelatedPost({ post }: any) {
                   <Image width={100} height={100} src={post.author.avatar_url} alt="" className="h-10 w-10 rounded-full bg-gray-100" />
                   <div className="text-sm leading-6">
                     <p className="font-semibold text-jacarta-700 dark:text-white">
-                      <a href={post.author.href}>
                         <span className="absolute inset-0" />
                         {post.author.name}
-                      </a>
                     </p>
                     <p className="text-jacarta-500 dark:text-jacarta-300 text-sm">{"ResumoDoLivro.com"}</p>
                   </div>
