@@ -72,7 +72,7 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
 
         <div className="my-14 mx-auto">
           <AdBanner
-            data-ad-slot="3989446316"
+            data-ad-slot="5950121594"
             data-ad-format="auto"
           />
         </div>
