@@ -156,6 +156,11 @@ body {
   margin: 0 auto;
 }
 
+#blog-content .size-full {
+  width: 500px;
+  height: 500px;
+}
+
 #blog-content .wp-caption {
   padding-top: 1rem!important;
   padding-bottom: 1rem!important;
