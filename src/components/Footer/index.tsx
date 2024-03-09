@@ -11,6 +11,7 @@ interface FooterProps {
 }
 
 export default function Footer({ menuData, settings }: FooterProps) {
+  // console.log(menuData)
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -18,6 +19,7 @@ export default function Footer({ menuData, settings }: FooterProps) {
         <div className="container">
 
           <div className="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">
+
             <div className="col-span-full sm:col-span-3 md:col-span-3">
               {/* <!-- Logo --> */}
               <a href="index.html" className="mb-6 inline-block">
@@ -80,36 +82,26 @@ export default function Footer({ menuData, settings }: FooterProps) {
               </div>
             </div>
 
-            <div className="col-span-full sm:col-span-3 md:col-span-2 md:col-start-6">
+            <div className="col-span-full sm:col-span-3 md:col-span-2 ">
               <h3 className="mb-6 font-display text-sm text-jacarta-700 dark:text-white">Links úteis</h3>
               <ul className="flex flex-col space-y-1 text-jacarta-500 dark:text-jacarta-300">
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
+                {Object.values(menuData).map((item: MenuDataType) => (
+                  <li key={item?.slug}><Link href={`/${item?.slug}`} className="hover:text-accent dark:hover:text-white">{item?.title}</Link></li>
+                ))}
+
               </ul>
             </div>
 
-            <div className="col-span-full sm:col-span-3 md:col-span-2">
-              <h3 className="mb-6 font-display text-sm text-jacarta-700 dark:text-white">Categorias</h3>
-              <ul className="flex flex-col space-y-1 text-jacarta-500 dark:text-jacarta-300">
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-                <li><Link href="#" className="hover:text-accent dark:hover:text-white">Lorem ipsum</Link></li>
-              </ul>
-            </div>
-
-            <div className="col-span-full sm:col-span-3 md:col-span-3 text-jacarta-700 dark:text-white">
-              [ADS 270x205]
+            <div className="col-span-full sm:col-span-7 text-jacarta-700 dark:text-white">
+              [ADS 670x149]
               <AdBanner
                 data-ad-slot="9990805939"
                 data-ad-format="auto"
                 data-full-width-responsive="true"
+                style={{
+                  width: 670,
+                  height: 149
+                }}
               />
             </div>
           </div>
