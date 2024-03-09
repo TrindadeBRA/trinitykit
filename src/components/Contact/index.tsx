@@ -90,12 +90,10 @@ export default function Contact() {
             <p className="mb-6 text-lg leading-normal lg text-jacarta-500 dark:text-jacarta-300">
               Aqui no Resumo do Livro, valorizamos imensamente a opinião e a interação com nossos leitores. Se você tem alguma dúvida, sugestão, ou apenas deseja compartilhar suas ideias conosco, estamos ansiosos para ouvi-lo!
             </p>
-
             <AdBanner
               data-ad-slot="4218824257"
               data-ad-format="auto"
             />
-
             {/* 
             <div
               className="rounded-2.5xl border border-jacarta-100 bg-white p-10 dark:border-jacarta-600 dark:bg-jacarta-700"
