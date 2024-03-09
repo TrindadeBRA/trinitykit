@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import AdBanner from '../AdBanner';
+import { Adsense } from "@ctrl/react-adsense";
 
 interface FooterProps {
   menuData: MenuDataType[];
@@ -94,14 +95,16 @@ export default function Footer({ menuData, settings }: FooterProps) {
 
             <div className="col-span-full sm:col-span-7 text-jacarta-700 dark:text-white">
               [ADS 670x149]
-              <AdBanner
-                data-ad-slot="9990805939"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-                style={{
+              <Adsense
+                client={`${process.env.NEXT_PUBLIC_GOOGLE_ADS_CLIENT_ID}`}
+                slot="9990805939"
+                style={{ 
+                  display: "block",
                   width: 670,
                   height: 149
                 }}
+                layout="in-article"
+                format="fluid"
               />
             </div>
           </div>
