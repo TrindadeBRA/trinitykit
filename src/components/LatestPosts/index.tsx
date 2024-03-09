@@ -71,7 +71,7 @@ export default function LatestPosts({ indexBlogData }: any) {
           ))}
         </div>
 
-        <div className="mt-20">
+        <div className="mt-20 mx-auto">
           <AdBanner
             data-ad-slot="3989446316"
             data-ad-format="auto"

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { IndexBlogDataType } from "@/pages/api/getIndexBlogData"
+import AdBanner from '../AdBanner'
 
 
 export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlogDataType }) {
@@ -68,6 +69,13 @@ export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlo
             </div>
           </article>
         ))}
+
+        <div className="my-14 mx-auto">
+          <AdBanner
+            data-ad-slot="3989446316"
+            data-ad-format="auto"
+          />
+        </div>
 
         <div className="grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2 md:grid-cols-3">
           {/* <!-- Posts --> */}
