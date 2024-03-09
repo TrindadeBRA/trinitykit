@@ -8,8 +8,6 @@ import { NextSeo } from "next-seo";
 import { HomeDataType, getHomeData } from ".././api/getHomeData";
 import { MenuDataType, getMenuData } from ".././api/getMenuData";
 import { SettingsDataType } from ".././api/getSettingsData";
-import LatestPosts from "@/components/LatestPosts";
-import { getIndexBlogData } from "../api/getIndexBlogData";
 
 //TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
 
@@ -17,10 +15,9 @@ type HomeProps = {
   menuData: MenuDataType[];
   homeData: HomeDataType;
   settings: SettingsDataType;
-  indexBlogData: any;
 }
 
-export default function QuemSomos({ menuData, homeData, settings, indexBlogData }: HomeProps) {
+export default function QuemSomos({ menuData, homeData, settings }: HomeProps) {
   return (
     <>
       <NextSeo
@@ -30,7 +27,6 @@ export default function QuemSomos({ menuData, homeData, settings, indexBlogData 
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={"Quem Somos"} slug={"quem-somos"}/>
       <WhoWeAre />
-      <LatestPosts indexBlogData={indexBlogData}/>
       <Testimonials />
       <Footer menuData={menuData} settings={settings} />
     </>
@@ -40,14 +36,11 @@ export default function QuemSomos({ menuData, homeData, settings, indexBlogData 
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
   const homeData: HomeDataType = await getHomeData();
-  const indexBlogData = await getIndexBlogData(page, perPage);
-
 
   return {
     props: {
       menuData,
       homeData,
-      indexBlogData
     },
   };
 };
