@@ -10,6 +10,7 @@ import { SettingsDataType } from "../api/getSettingsData";
 import BlogPagination from "@/components/BlogPagination";
 import { getAllBlogData } from "../api/getAllBlogData";
 import { useRouter } from "next/router";
+import AdBanner from "@/components/AdBanner";
 
 type BlogPageProps = {
   menuData: MenuDataType[];
@@ -29,6 +30,12 @@ export default function BlogPage({ menuData, settings, indexBlogData, totalPages
       />
       <NewHeader menuData={menuData} settings={settings} />
       <MiniHero title={"Blog"} slug={"blog"} />
+      <div className="my-4">
+        <AdBanner
+          data-ad-slot="3989446316"
+          data-ad-format="auto"
+        />
+      </div>
       <BlogArchive indexBlogData={indexBlogData} />
       <BlogPagination currentPage={currentPage} totalPages={totalPagesPagination} />
       <Footer menuData={menuData} settings={settings} />
