@@ -13,15 +13,6 @@ interface FooterProps {
 }
 
 export default function Footer({ menuData, settings }: FooterProps) {
-  // console.log(menuData)
-
-  useEffect(() => {
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (err) {
-      console.log(err);
-    }
-  }, []);
 
   const currentYear = new Date().getFullYear();
   return (
@@ -104,16 +95,10 @@ export default function Footer({ menuData, settings }: FooterProps) {
             </div>
 
             <div className="col-span-full sm:col-span-7 text-jacarta-700 dark:text-white">
-              {/* <!-- Footer --> */}
-              <ins className="adsbygoogle"
-                style={{ display: "inline-block", width: "670px", height: "149px" }}
-                data-ad-client="ca-pub-9804371639852685"
-                data-ad-slot="9990805939"></ins>
 
               <AdBanner
                 data-ad-slot="9990805939"
                 data-ad-format="auto"
-                style={{ display: "inline-block", width: "670px", height: "149px" }}
               />
 
             </div>
