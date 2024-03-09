@@ -9,7 +9,7 @@ export default function BlogPostPage({post}: any) {
     <div className="relative">
       <BlogPostHero post={post}/>
       <BlogPostContent post={post}/>
-        <div className="mt-20">
+        <div className="my-14 mx-auto container">
             <AdBanner
               data-ad-slot="3989446316"
               data-ad-format="auto"
