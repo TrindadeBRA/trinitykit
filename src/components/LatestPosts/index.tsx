@@ -71,10 +71,12 @@ export default function LatestPosts({ indexBlogData }: any) {
           ))}
         </div>
 
-        <AdBanner
-          data-ad-slot="3989446316"
-          data-ad-format="auto"
-        />
+        <div className="mt-4">
+          <AdBanner
+            data-ad-slot="3989446316"
+            data-ad-format="auto"
+          />
+        </div>
 
       </div>
     </section>

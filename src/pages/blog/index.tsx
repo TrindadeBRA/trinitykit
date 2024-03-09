@@ -30,7 +30,7 @@ export default function BlogPage({ menuData, settings, indexBlogData, totalPages
       />
       <NewHeader menuData={menuData} settings={settings} />
       <MiniHero title={"Blog"} slug={"blog"} />
-      <div className="my-4">
+      <div className="py-4">
         <AdBanner
           data-ad-slot="3989446316"
           data-ad-format="auto"
