@@ -103,10 +103,10 @@ export default function BlogRelatedPost({ post }: any) {
                     href={`/blog/${post?.slug}`}
                   >
                     <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 line-clamp-1">
-                      <a href={post.href} className='text-jacarta-700 dark:text-white'>
+                      <div className='text-jacarta-700 dark:text-white'>
                         <span className="absolute inset-0" />
                         {post.title}
-                      </a>
+                      </div>
                     </h3>
                     <p className="mt-5 line-clamp-3 text-sm leading-6 text-jacarta-500 dark:text-jacarta-300">{post.content}</p>
                   </Link>
