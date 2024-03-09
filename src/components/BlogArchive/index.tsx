@@ -7,7 +7,7 @@ import AdBanner from '../AdBanner'
 export default function BlogArchive({ indexBlogData }: { indexBlogData: IndexBlogDataType }) {
   // console.log(">>>", indexBlogData)
   return (
-    <section className="relative py-16">
+    <section className="relative py-16 bg-light-base dark:bg-jacarta-800">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image
           width={370}
