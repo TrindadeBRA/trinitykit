@@ -113,7 +113,6 @@ export default function Footer({ menuData, settings }: FooterProps) {
               <li><Link href="/politica-de-privacidade" className="hover:text-accent dark:hover:text-white">Política de Privacidade</Link></li>
             </ul>
           </div>
-
         </div>
       </footer>
     </>
