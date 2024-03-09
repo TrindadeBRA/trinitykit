@@ -6,6 +6,7 @@ import { SettingsDataType } from '@/pages/api/getSettingsData'
 import { MenuDataType } from '@/pages/api/getMenuData'
 import Link from 'next/link'
 import Image from 'next/image'
+import AdBanner from '../AdBanner'
 
 interface HeaderProps {
   menuData: MenuDataType[];
@@ -69,6 +70,12 @@ export default function LatestPosts({ indexBlogData }: any) {
             </article>
           ))}
         </div>
+
+        <AdBanner
+          data-ad-slot="3989446316"
+          data-ad-format="auto"
+        />
+
       </div>
     </section>
   )
