@@ -2,7 +2,7 @@ import { MenuDataType } from '@/pages/api/getMenuData';
 import { SettingsDataType } from '@/pages/api/getSettingsData';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import AdBanner from '../AdBanner';
 import { Adsense } from "@ctrl/react-adsense";
 import Script from 'next/script';
@@ -14,6 +14,15 @@ interface FooterProps {
 
 export default function Footer({ menuData, settings }: FooterProps) {
   // console.log(menuData)
+
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+
   const currentYear = new Date().getFullYear();
   return (
     <>
@@ -103,9 +112,6 @@ export default function Footer({ menuData, settings }: FooterProps) {
                   style={{display:"inline-block", width:"670px", height:"149px"}}
                   data-ad-client="ca-pub-9804371639852685"
                   data-ad-slot="9990805939"></ins>
-              <script>
-                  (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
             </div>
           </div>
 
