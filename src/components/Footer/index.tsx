@@ -95,12 +95,13 @@ export default function Footer({ menuData, settings }: FooterProps) {
             </div>
 
             <div className="col-span-full sm:col-span-7 text-jacarta-700 dark:text-white">
-
-              <AdBanner
-                data-ad-slot="9990805939"
-                data-ad-format="auto"
-              />
-
+              <div className="mx-auto">
+                <AdBanner
+                  data-ad-slot="9990805939"
+                  data-ad-format="auto"
+                  style={{ width: "670px", height: "150px" }}
+                />
+              </div>
             </div>
           </div>
 
