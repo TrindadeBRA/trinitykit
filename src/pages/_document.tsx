@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { Partytown } from '@builder.io/partytown/react';
 import Script from 'next/script'
 
 export default function Document() {
@@ -11,6 +12,7 @@ export default function Document() {
           strategy="lazyOnload"
           crossOrigin="anonymous"
         /> */}
+        <Partytown debug={true} forward={['dataLayer.push']} />
       </Head>
       <body className="bg-light-base dark:bg-jacarta-900">
         <Main />
