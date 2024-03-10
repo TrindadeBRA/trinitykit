@@ -130,6 +130,16 @@ body {
   margin-bottom: 1em;
 }
 
+#blog-content b,
+#blog-content strong {
+  color: #131740;
+}
+
+.dark #blog-content b,
+.dark #blog-content strong {
+  color: #fff;
+}
+
 #blog-content li {
   margin-bottom: 0.5em;
 }
@@ -163,8 +173,8 @@ body {
 }
 
 #blog-content .size-full {
-  width: 500px;
-  height: 500px;
+  width: unset!important;
+  height: unset!important;
 }
 
 #blog-content .wp-caption {
