@@ -42,6 +42,7 @@ export default function Home({ menuData, homeData, settings, indexBlogData }: Ho
   )
 }
 
+
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
   const homeData: HomeDataType = await getHomeData();
