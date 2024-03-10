@@ -152,6 +152,12 @@ body {
   list-style-type: decimal;
 }
 
+#blog-content [id^="attachment"] {
+  width: unset!important;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 #blog-content .aligncenter {
   margin: 0 auto;
 }
