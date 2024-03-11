@@ -5,6 +5,7 @@ import { DefaultSeo } from 'next-seo';
 import { SettingsDataType, getSettingsData } from './api/getSettingsData';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
+import Head from 'next/head';
 
 export default function App({ Component, pageProps, settings }: AppProps & { settings: SettingsDataType }) {
   return (
@@ -18,13 +19,17 @@ export default function App({ Component, pageProps, settings }: AppProps & { set
           url: settings?.frontend_app_url,
           siteName: settings?.title,
           images: [{
-            url: '/ogimage.webp',
+            url: settings?.og_image_url,
             width: 600,
             height: 315,
             alt: settings?.title,
           }],
         }}
       />
+      <Head>
+        <link rel="icon" href={settings?.favicon_url} />
+        {/* Adicione outras meta tags de ícones aqui, se necessário */}
+      </Head>
       <Component {...pageProps} settings={settings}/>
       {/* <Analytics /> */}
       <GoogleAnalytics gaId={settings?.google_analytics_id}/>

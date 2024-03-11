@@ -22,4 +22,6 @@ export type SettingsDataType = {
   whatsapp_url: string;
   frontend_app_url: string;
   google_analytics_id: string;
+  favicon_url: string;
+  og_image_url: string;
 };
