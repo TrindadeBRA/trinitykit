@@ -1,6 +1,4 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HeroSection from "@/components/Hero";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { HomeDataType, getPageHomeData } from "./api/getPageHomeData";
@@ -46,8 +44,6 @@ export default function Home({ menuData, homeData, settings, indexBlogData }: Ho
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
   const homeData: HomeDataType = await getPageHomeData();
-
-  console.log(":::>>", homeData)
 
   // Defina os parâmetros de paginação conforme necessário
   const page = 1; // Página atual
