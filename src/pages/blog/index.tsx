@@ -26,7 +26,7 @@ export default function BlogPage({ menuData, settings, indexBlogData, totalPages
     <>
       <NextSeo
         title={`${settings?.title} - Blog`}
-        description="Confira todos nossos resumos e artigos!"
+        description="Explore nosso universo de conhecimento e entretenimento! Descubra resenhas de livros, insights fascinantes, dicas de leitura e muito mais. Acompanhe-nos nesta jornada intelectual e inspire-se a cada clique!"
       />
       <NewHeader menuData={menuData} settings={settings} />
       <MiniHero title={"Blog"} slug={"blog"} />
