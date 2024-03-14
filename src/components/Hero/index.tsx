@@ -1,4 +1,4 @@
-import { HomeDataType } from "@/pages/api/getHomeData";
+import { HomeDataType } from "@/pages/api/getPageHomeData";
 import Image from "next/image";
 
 export default function HeroSection(homeData: HomeDataType) {

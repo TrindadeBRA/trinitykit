@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/Hero";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import { HomeDataType, getHomeData } from "./api/getHomeData";
+import { HomeDataType, getPageHomeData } from "./api/getPageHomeData";
 import { MenuDataType, getMenuData } from "./api/getMenuData";
 import { SettingsDataType } from "./api/getSettingsData";
 import NewHeader from "@/components/NewHeader";
@@ -45,7 +45,7 @@ export default function Home({ menuData, homeData, settings, indexBlogData }: Ho
 
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
-  const homeData: HomeDataType = await getHomeData();
+  const homeData: HomeDataType = await getPageHomeData();
 
   console.log(":::>>", homeData)
 

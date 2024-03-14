@@ -1,7 +1,7 @@
-export const getHomeData = async () => {
+export const getPageData = async (slug:any) => {
   try {
     // Realiza a requisição para a API no WordPress
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/page/home/`);
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/trinitykit/v1/page/${slug}/`);
   
     // Verifica se a requisição foi bem-sucedida
     if (!response.ok) {
@@ -15,18 +15,3 @@ export const getHomeData = async () => {
     throw error;
   }
 };
-
-export type HomeDataType = {
-  id: number;
-  title: string;
-  yoast_title: string;
-  yoast_description: string;
-  content: string;
-  date: string;
-  hero: {
-    title: string;
-    description: string;
-    cta_text: string;
-    cta_url: string;
-  };
-}

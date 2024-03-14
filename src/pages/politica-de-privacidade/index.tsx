@@ -5,24 +5,23 @@ import PrivacyPolicy from "@/components/PrivacyPolicy";
 import Testimonials from "@/components/Testimonials";
 import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
-import { HomeDataType, getHomeData } from ".././api/getHomeData";
+import { HomeDataType, getPageHomeData } from ".././api/getPageHomeData";
 import { MenuDataType, getMenuData } from ".././api/getMenuData";
 import { SettingsDataType } from ".././api/getSettingsData";
+import { getPageData } from "../api/getPageData";
 
-//TO DO - Desenvolver ci/cd para o tema do wordpress e a pasta /out + opcao de rebuildar a aploicacao via api
-
-type HomeProps = {
+type PageProps = {
   menuData: MenuDataType[];
-  homeData: HomeDataType;
+  pageData: any;
   settings: SettingsDataType;
 }
 
-export default function PoliticaDePrivacidade({ menuData, homeData, settings }: HomeProps) {
+export default function PoliticaDePrivacidade({ menuData, pageData, settings }: PageProps) {
   return (
     <>
       <NextSeo
-        title={`${homeData?.yoast_title}`}
-        description={`${homeData?.yoast_description}`}
+        title={`${pageData?.yoast_title}`}
+        description={`${pageData?.yoast_description}`}
       />
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={"Política de privacidade"} slug={"politica-de-privacidade"} />
@@ -35,12 +34,12 @@ export default function PoliticaDePrivacidade({ menuData, homeData, settings }: 
 
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
-  const homeData: HomeDataType = await getHomeData();
+  const pageData: any = await getPageData("politica-de-privacidade");
 
   return {
     props: {
       menuData,
-      homeData,
+      pageData,
     },
   };
 };
