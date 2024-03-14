@@ -21,7 +21,7 @@ export default function BlogBookComponent({ post }: any) {
   }
 
   return (
-      <div className="border-t border-jacarta-100 dark:border-jacarta-600 bg-gradient-to-b from-light-base to-white dark:from-jacarta-800 dark:to-jacarta-600 py-24 sm:py-32">
+      <div className="border-t border-jacarta-200 dark:border-jacarta-600 bg-gradient-to-b from-light-base to-white dark:from-jacarta-800 dark:to-jacarta-600 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-20">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-jacarta-700 dark:text-white">Quer saber Mais? Leia o livro!</h2>
