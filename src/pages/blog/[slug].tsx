@@ -28,7 +28,7 @@ export default function BlogPost({ menuData, post, settings }: any) {
             <NewHeader menuData={menuData} settings={settings}/>
             <BlogPostPage post={post}/>
 
-            <div className="py-10 flex justify-center bg-light-base dark:bg-jacarta-800">
+            <div className="container py-10 flex justify-center bg-light-base dark:bg-jacarta-800">
                 <AdBanner
                     data-ad-slot="3989446316"
                     data-ad-format="auto"
@@ -37,6 +37,14 @@ export default function BlogPost({ menuData, post, settings }: any) {
 
             <BlogBookComponent post={post}/>
             <BlogRelatedPost post={post} />
+
+            <div className="container py-10 flex justify-center bg-light-base dark:bg-jacarta-900">
+                <AdBanner
+                    data-ad-slot="5198973245"
+                    data-ad-format="auto"
+                />
+            </div>
+            
             <Footer menuData={menuData} settings={settings} />
         </>
     );
