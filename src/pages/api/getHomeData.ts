@@ -19,6 +19,8 @@ export const getHomeData = async () => {
 export type HomeDataType = {
   id: number;
   title: string;
+  yoast_title: string;
+  yoast_description: string;
   content: string;
   date: string;
   hero: {

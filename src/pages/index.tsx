@@ -27,8 +27,8 @@ export default function Home({ menuData, homeData, settings, indexBlogData }: Ho
   return (
     <>
       <NextSeo
-        title={`${settings?.title} - ${homeData?.title}`}
-        description="Home page description of the page"
+        title={`${homeData?.yoast_title}`}
+        description={`${homeData?.yoast_description}`}
       />
       <NewHeader menuData={menuData} settings={settings}/>
       {/* <HeroSection {...homeData} /> */}
@@ -46,6 +46,8 @@ export default function Home({ menuData, homeData, settings, indexBlogData }: Ho
 export const getStaticProps: GetStaticProps = async () => {
   const menuData: MenuDataType[] = await getMenuData();
   const homeData: HomeDataType = await getHomeData();
+
+  console.log(":::>>", homeData)
 
   // Defina os parâmetros de paginação conforme necessário
   const page = 1; // Página atual

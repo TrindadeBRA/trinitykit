@@ -21,8 +21,8 @@ export default function QuemSomos({ menuData, homeData, settings }: HomeProps) {
   return (
     <>
       <NextSeo
-        title={`${settings?.title} - ${homeData?.title}`}
-        description="Home page description of the page"
+        title={`${homeData?.yoast_title}`}
+        description={`${homeData?.yoast_description}`}
       />
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={"Quem Somos"} slug={"quem-somos"}/>

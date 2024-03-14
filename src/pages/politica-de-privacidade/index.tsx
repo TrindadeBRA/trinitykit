@@ -21,8 +21,8 @@ export default function PoliticaDePrivacidade({ menuData, homeData, settings }: 
   return (
     <>
       <NextSeo
-        title={`${settings?.title} - ${homeData?.title}`}
-        description="Home page description of the page"
+        title={`${homeData?.yoast_title}`}
+        description={`${homeData?.yoast_description}`}
       />
       <NewHeader menuData={menuData} settings={settings}/>
       <MiniHero title={"Política de privacidade"} slug={"politica-de-privacidade"} />
