@@ -7,6 +7,7 @@ import { NextSeo } from "next-seo";
 import { getAllPostSlugs, getPostBySlug } from "../api/getBlogData";
 import { getMenuData } from "../api/getMenuData";
 import BlogRelatedPost from "@/components/BlogRelatedPost";
+import BlogBookComponent from "@/components/BlogBookComponent";
 
 export default function BlogPost({ menuData, post, settings }: any) {
     // console.log(post)
@@ -25,6 +26,7 @@ export default function BlogPost({ menuData, post, settings }: any) {
             />
             <NewHeader menuData={menuData} settings={settings}/>
             <BlogPostPage post={post}/>
+            <BlogBookComponent post={post}/>
             <BlogRelatedPost post={post} />
             <Footer menuData={menuData} settings={settings} />
         </>
