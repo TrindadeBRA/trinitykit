@@ -38,7 +38,7 @@ export default function BlogPost({ menuData, post, settings }: any) {
             <BlogBookComponent post={post}/>
             <BlogRelatedPost post={post} />
 
-            <div className="py-10 mx-auto bg-light-base dark:bg-jacarta-800">
+            <div className="py-10 mx-auto bg-light-base dark:bg-jacarta-900">
                 <AdBanner
                     data-ad-slot="3989446316"
                     data-ad-format="auto"
