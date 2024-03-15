@@ -55,7 +55,8 @@ export default function BlogPost() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const slug: any = router.query.slug;
+            const { slug } :any = router.query;
+            
             if (slug) {
                 try {
                     const response = await fetch(`https://cms.thetrinityweb.com.br/wp-json/trinitykit/v1/post/${slug}`, {
