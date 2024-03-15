@@ -15,9 +15,9 @@ export default function BlogPostHero({ post }: any) {
   return (
     <>
       <div
-        className="relative bg-cover bg-center bg-no-repeat py-24 after:absolute after:inset-0 after:bg-jacarta-900/60 mt-[113px]"
+        className="relative bg-cover bg-center bg-no-repeat py-24 after:absolute after:inset-0 after:bg-jacarta-900/85 mt-[113px]"
         style={{
-          backgroundImage: `url('/img/page-title/pageheader.webp')`
+          backgroundImage: `url('${post?.post_thumbnail_url ? post?.post_thumbnail_url : "/img/page-title/pageheader.webp"}')`
         }}      >
         <div className="container relative z-10">
           <h1 className="text-center font-display text-4xl font-medium text-white">{post?.title}</h1>
