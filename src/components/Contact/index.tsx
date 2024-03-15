@@ -42,7 +42,7 @@ export default function Contact() {
       });
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
 
       // Limpar o formulário após um envio bem-sucedido
       if (response.ok) {
@@ -64,7 +64,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-24 dark:bg-jacarta-800">
+    <section className="relative py-24 dark:bg-jacarta-800" id='contato'>
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image width={1920} height={900} src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
       </picture>
