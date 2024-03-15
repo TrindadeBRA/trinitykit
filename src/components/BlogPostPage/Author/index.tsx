@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function BlogPostAuthor({ post }: any) {
   return (
-    <div className="bg-light-base dark:bg-jacarta-800 py-32">
+    <div className="bg-light-base dark:bg-jacarta-800 pt-20 pb-10">
       <div className="mx-auto max-w-[85%] lg:max-w-[48.125rem]">
         <div
           className="flex flex-col md:flex-row rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700 items-center shadow-2xl"

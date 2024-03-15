@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function BlogRelatedPost({ post }: any) {
   // console.log(post?.related_posts)
   return (
-    <div className="border-t border-jacarta-100 dark:border-jacarta-500 bg-gradient-to-b from-white to-light-base dark:from-jacarta-600 dark:to-jacarta-900 py-24 sm:py-32">
+    <div className="border-t border-jacarta-100 dark:border-jacarta-500 bg-gradient-to-b from-white to-light-base dark:from-jacarta-600 dark:to-jacarta-900 py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-jacarta-700 dark:text-white">Você também pode gostar!</h2>
