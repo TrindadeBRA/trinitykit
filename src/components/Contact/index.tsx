@@ -51,7 +51,10 @@ export default function Contact() {
           email: "",
           message: "",
         });
+
+        alert("Recebemos seu contato, responderemos o mais breve possível!")
       } else {
+        alert("Ocorreu um erro ao enviar o formulário.")
         setError("Ocorreu um erro ao enviar o formulário.");
       }
     } catch (error) {
