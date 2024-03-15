@@ -15,6 +15,8 @@ interface HeaderProps {
 
 export default function NewHeader({ menuData, settings }: HeaderProps) {
 
+  // console.log(">>", menuData)
+
   const [theme, setTheme] = useState('light');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
