@@ -25,29 +25,17 @@ export default function BlogPost() {
     }
     const menuData: any = [
         {
-            id: 16,
-            title: 'Home',
+            id: 1,
+            title: 'Preview Mode',
             slug: '',
-            url: 'https://cms.thetrinityweb.com.br/'
+            url: '/'
         },
         {
-            id: 630,
-            title: 'Quem Somos',
-            slug: 'quem-somos',
-            url: 'https://cms.thetrinityweb.com.br/quem-somos/'
+            id: 2,
+            title: 'Produção',
+            slug: '',
+            url: 'https://hml.thetrinityweb.com.br'
         },
-        {
-            id: 27,
-            title: 'Blog',
-            slug: 'blog',
-            url: 'https://cms.thetrinityweb.com.br/blog/'
-        },
-        {
-            id: 631,
-            title: 'Política de privacidade',
-            slug: 'politica-de-privacidade',
-            url: 'https://cms.thetrinityweb.com.br/politica-de-privacidade/'
-        }
     ]
 
     const [post, setPost]: any = useState(null);
@@ -76,16 +64,22 @@ export default function BlogPost() {
         };
 
         fetchData();
-    }, [router.query.slug]);
+    }, [router.query]);
 
     if (!post) {
-        return <div>Loading...</div>;
+        return (
+            <div className="flex items-center justify-center h-screen bg-black text-white">
+                <div className="text-center">
+                    <h1 className="text-4xl font-bold mb-4">Carregando...</h1>
+                </div>
+            </div>
+        );
     }
 
     return (
         <>
             <NextSeo
-                title={post?.yoast_title}
+                title={`Preview - ${post?.yoast_title}`}
                 description={post?.yoast_description}
                 openGraph={{
                     type: 'article',
