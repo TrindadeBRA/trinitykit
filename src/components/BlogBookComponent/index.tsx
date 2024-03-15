@@ -27,7 +27,7 @@ export default function BlogBookComponent({ post }: any) {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-jacarta-700 dark:text-white">Quer saber Mais? Leia o livro!</h2>
           </div>
         <div className="flex flex-col sm:flex-row max-w-3xl mx-auto items-center gap-8">
-          <Link href={book_component?.link_afiliado} className='mx-auto max-w-60 sm:max-w-full'>
+          <Link href={book_component?.link_afiliado} className='mx-auto max-w-60 sm:max-w-full' target='_blank'>
             <Image
               src={book_component?.capa_do_livro}
               width={700}
@@ -37,11 +37,11 @@ export default function BlogBookComponent({ post }: any) {
             />
           </Link>
           <div className='flex-col'>
-            <p className='mb-8 text-jacarta-500 dark:text-jacarta-300 text-center sm:text-left'>{`Ao adquirir ${book_component?.nome_do_livro} através do link abaixo, você não só expande sua biblioteca, mas também apoia o nosso blog! Cada compra contribui diretamente para mantermos nosso conteúdo vivo e gratuito. Obrigado pelo seu apoio!`}</p>
-            <Link href={book_component?.link_afiliado} className=''>
+            <p className='mb-8 text-jacarta-500 dark:text-jacarta-300 text-center sm:text-left'>{`Ao adquirir "${book_component?.nome_do_livro}" através do link abaixo, você não só expande sua biblioteca, mas também apoia o nosso blog! Cada compra contribui diretamente para mantermos nosso conteúdo vivo e gratuito. Obrigado pelo seu apoio!`}</p>
+            <Link href={book_component?.link_afiliado} className='' target='_blank'>
               <p className='font-bold text-lg text-jacarta-700 dark:text-white text-center sm:text-left'>{book_component?.nome_do_livro}, Escrito por {book_component?.autor_do_livro}</p>
             </Link>
-            <Link href={book_component?.link_afiliado} className='w-full flex justify-center sm:justify-start'>
+            <Link href={book_component?.link_afiliado} className='w-full flex justify-center sm:justify-start' target='_blank'>
               <div className='flex gap-4 bg-[#fe9900] hover:bg-[#fec400] w-fit px-6 py-2 mt-3 border-0 rounded-lg'>
                 <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                   width="25px" height="25px" viewBox="0 0 35.418 35.418"
