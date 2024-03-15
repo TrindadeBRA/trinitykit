@@ -1,10 +1,67 @@
 // components/Testimonials.js
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import AdBanner from '../AdBanner';
 
 export default function Contact() {
+
+  const [formData, setFormData]: any = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (e: any) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    // Desabilitar o botão de envio
+    setSubmitting(true);
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('message', formData.message);
+
+    try {
+      const token = "ohuhasgdkahsdkjasnbdkjbasdkjbdjb"
+      const response = await fetch('https://cms.thetrinityweb.com.br/wp-json/trinitykit/v1/contact-form/submit', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + token,
+        },
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      // Limpar o formulário após um envio bem-sucedido
+      if (response.ok) {
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setError("Ocorreu um erro ao enviar o formulário.");
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setError("Ocorreu um erro ao enviar o formulário.");
+    } finally {
+      // Habilitar o botão de envio novamente
+      setSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative py-24 dark:bg-jacarta-800">
@@ -19,7 +76,7 @@ export default function Contact() {
             <p className="mb-16 text-lg leading-normal lg text-jacarta-500 dark:text-jacarta-300">
               Por favor, utilize o formulário abaixo para entrar em contato, e prometemos responder o mais breve possível.
             </p>
-            <form id="contact-form" method="post">
+            <form id="contact-form" method="post" onSubmit={handleSubmit}>
               <div className="flex space-x-7">
                 <div className="mb-6 w-1/2">
                   <label htmlFor="name" className="mb-1 block font-display text-sm text-jacarta-700 dark:text-white"
@@ -29,6 +86,8 @@ export default function Contact() {
                     className="contact-form-input w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     id="name"
                     type="text"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -41,6 +100,8 @@ export default function Contact() {
                     className="contact-form-input w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-accent/10 focus:ring-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder:text-jacarta-300"
                     id="email"
                     type="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -55,6 +116,8 @@ export default function Contact() {
                   required
                   name="message"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
                 ></textarea>
               </div>
 
@@ -82,6 +145,7 @@ export default function Contact() {
                 className="relative mt-4 hidden rounded-lg border border-transparent p-4"
               ></div>
             </form>
+            {error && <p className="text-red-500">{error}</p>}
           </div>
 
           {/* <!-- Info --> */}
